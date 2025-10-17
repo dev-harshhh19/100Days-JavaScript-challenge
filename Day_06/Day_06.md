@@ -77,7 +77,7 @@ do {
 ```
 
 **Example**
-```javascript
+```javascript 
 let number = 1;
 do {
     console.log("Number is: " + number);
