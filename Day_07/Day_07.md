@@ -3,7 +3,7 @@
 
 > **What is Function**
 - **Function** as a reusable block of the code, that performs the specific task.
-- Instead of writing the same code over and over, write it in **Function**.
+- Instead of writing the same code over again and again, write it in **Function**.
 - Once write an code in function you can just invoke that function by its name.
 
 #### Syntax:
