@@ -27,7 +27,7 @@ console.log(color.length);
 
 //-----------------------------------
 
-//Example
+//Example1
 
 let cart = ['Monitor','Graphics_card','Laptop','Keyboard','Mause']
 cart.push('Headphones')  // Adding Item in cart
@@ -37,3 +37,14 @@ cart.pop();  // Removing last item from cart
 if (cart.indexOf('Laptop')!== -1){
     console.log('Laptop is in the cart');
 }
+
+// Example2
+
+let numbers = [33,44, 11, 63, 8];
+let max = numbers[0];
+for (let i = 1; i < numbers.length; i++) {
+    if (numbers[i] > max) {
+        max = numbers[i];
+    }
+}
+console.log(max);
