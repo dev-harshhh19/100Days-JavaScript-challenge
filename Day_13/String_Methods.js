@@ -6,8 +6,8 @@ console.log(name.length);
 
 //toUpperCase/toLowerCase
 let greet = "Hello JavaScript";
-console.log(greet.toLowerCase);
-console.log(greet.toUpperCase);
+console.log(greet.toLowerCase()); // fixed: call the method
+console.log(greet.toUpperCase()); // fixed: call the method
 
 //-------------------------------------------
 
@@ -31,8 +31,9 @@ console.log(word.substring(4));
 //-------------------------------------------
 
 //substr(start,length)
+// Deprecated: use slice(start, end) instead
 let phrase = "Learning JavaScript is fun";
-console.log(phrase.substr(9,10));
+console.log(phrase.slice(9, 19)); // "JavaScript"
 
 //-------------------------------------------
 
@@ -54,14 +55,14 @@ console.log(input.trimEnd());
 
 //split
 let sentence = "BMW, Audi, Porsche, Ferrari"
-console.log(sentence.split(","));
+console.log(sentence.split(", ")); // split on ", " to avoid leading spaces
 
 //-------------------------------------------
 
-//include
+//includes
 let statement = " I love coding in JavaScript";
-console.log(statement.includes("Coding"));
-console.log(statement.includes("C/C++"));
+console.log(statement.includes("coding")); // case-sensitive
+console.log(statement.includes("C/C++"));  // remains false
 
 //-------------------------------------------
 
@@ -72,9 +73,9 @@ console.log(filename.endsWith(".js"));
 
 //-------------------------------------------
 
-//chatAt
+//charAt
 let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-console.log(alphabet.charAt(0));;
+console.log(alphabet.charAt(0)); // fixed: removed extra semicolon
 
 //-------------------------------------------
 
