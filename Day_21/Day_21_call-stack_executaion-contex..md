@@ -111,6 +111,20 @@ Uncaught ReferenceError: innerFunction is not defined
 
 ----
 
+### Visual flow of Call Stack and Execution Context
+
+```plaintext
+Start → Global Execution Context (pushed)
+   ↓
+   Function called → New Execution Context (pushed)
+   ↓
+   Function completes → Context popped
+   ↓
+   Continue global execution
+   ↓
+   Global context popped (program ends)
+```    
+----
 # Summary
 - The call stack is a mechanism for managing function execution in JavaScript.
 - Each time a function is called, a new execution context is created and added to the call stack.
