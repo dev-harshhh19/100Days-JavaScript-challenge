@@ -125,6 +125,7 @@ step1()
 ```
 - Here, each step returns a promise that resolves when the asynchronous operation is complete. The `then` method is used to chain the promises together, allowing for a more linear and readable flow of asynchronous operations.
 - This approach helps to avoid callback hell and makes the code easier to understand and maintain.
+- Promises can also be used with `Promise.all` to run multiple promises concurrently.
 ---
 ### Async/Await
 - Async/await is a syntactic feature in JavaScript that allows you to write asynchronous code in a more synchronous-looking manner.
