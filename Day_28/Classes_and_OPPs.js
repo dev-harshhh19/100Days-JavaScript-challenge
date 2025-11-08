@@ -1,4 +1,3 @@
-/*
 // Basic syntax
 class Grocerry{
     constructor(name, price){
@@ -72,7 +71,7 @@ class Circle extends Shape{
 }
 const shape = [new Rectangle(4,5), new Circle(3)];
 shape.forEach(shape => shape.area());
-*/
+
 
 // ---------------------------------------------------------------
 
