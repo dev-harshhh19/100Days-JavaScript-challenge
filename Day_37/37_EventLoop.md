@@ -89,7 +89,20 @@ Here’s a polished and corrected version of what you wrote — clearer, more ac
   - Node.js uses **libuv**, which has more detailed phases (Timers, I/O, Poll, Check, Close, etc.).
 ---
 # Summary
-- The Event Loop is a fundamental concept in JavaScript that enables asynchronous programming by managing the execution of tasks.
-- It allows non-blocking operations, ensuring that long-running tasks do not block the main thread.
-- The Event Loop continuously checks the Call Stack and Task Queues (Callback Queue and Microtask Queue) to execute tasks efficiently.
+1. Call Stack Execution Order
+- Nested functions showing LIFO behavior.
+- Example: `function a(){b()} function b(){c()} function c(){console.log("Done")}`
+
+2. Basic setTimeout Async Behavior
+- Demonstrates that `setTimeout` runs after the call stack is empty.
+- Example: `console.log('Start'); setTimeout(...); console.log('End');`
+
+3. Promise (Microtask) Priority
+- Show that `Promise.then()` executes before tasks in the callback queue.
+- Example: `console.log('Start'); Promise.resolve().then(...); setTimeout(...); console.log('End');`
+4. Microtask vs Callback Queue
+- Mix `setTimeout` and multiple `Promise.then()` to show priority and order of execution.
+
+5. Event Loop Phases (Node.js Timers, I/O, Check)
+- Demonstrate the effect of `setTimeout`, `fs.readFile`, and `setImmediate` callbacks to show how Node.js phases determine execution order.
 ---
