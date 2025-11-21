@@ -1,7 +1,7 @@
 # Day 41 - Introduction to DOM
-` 
+ 
 In the Day 41, I coverd the fundamentals of the DOM (Document Object Model) and how to manipulate it using JavaScript. How browsers represent HTML internally, what nodes are, and how to select element using `querySelector` and `getElementById`. 
-`
+
 ---
 ## What is DOM?
 - The Document Object Model (DOM) is a programming that the browser provides so JavaScript can interact with web pages.
