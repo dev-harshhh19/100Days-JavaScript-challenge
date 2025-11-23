@@ -32,6 +32,9 @@ console.log(item.previousElementSibling); // Outputs the previous sibling elemen
 ---
 
 ### Example [Check here](./index.html)
-
+### Small practical usr case example: [Check here](./example.html)
 ---
 
+# Summary
+- Learned about DOM Traversal and how to navigate through the DOM tree using JavaScript properties like `parentElement`, `children`, `nextElementSibling`, and `previousElementSibling`.
+---
