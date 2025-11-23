@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example</title>
+</head>
+<body>
+    <ul id="todo-list">
+        <li class="todo">
+            Learn JavaScript
+            <button class="delete-btn">Delete</button>
+        </li>
+        <li class="todo">
+            Deploy proejct
+            <button class="delete-btn">Delete</button>
+        </li>
+    </ul>
+    <script>
+        const deleteButtons = document.querySelectorAll('.delete-btn');
+
+        deleteButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                const todoItem = e.target.parentNode;
+                todoItem.parentNode.removeChild(todoItem);
+            })
+        })
+    </script>
+</body>
+</html>
