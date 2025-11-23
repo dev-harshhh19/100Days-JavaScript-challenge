@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Parent/Child/Sibling Example</title>
+  <style>
+    .box { padding: 10px; border: 1px solid #ccc; margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+
+  <div class="parent box">
+    <p class="child">I am the child element</p>
+  </div>
+
+  <ul class="list box">
+    <li class="item">Item 1 (selected by JS)</li>
+    <li>Item 2 (next sibling)</li>
+    <li>Item 3 (third item)</li>
+  </ul>
+
+  <div class="wrapper box">
+    <p>Previous Sibling</p>
+    <p class="item">This .item has a previousElementSibling</p>
+  </div>
+
+  <script src="DOM_traversal.js"></script>
+
+</body>
+</html>
