@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Events</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: grey;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            max-width: 300px;
+        }
+        button,
+        input {
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <button id="button">Click Me</button>
+        <input type="text" id="inputField" placeholder="Type something...">
+        <input type="text" id="changeInputField" placeholder="Type to see change event...">
+        <form id="form">
+            <input type="text" name="name" placeholder="Your Name">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="Intro_Event.js"></script>
+</body>
+
+</html>
