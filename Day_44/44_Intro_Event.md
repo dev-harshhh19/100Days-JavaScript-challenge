@@ -56,7 +56,7 @@ form.addEventListener('submit', function(event) {
     - And much more!
 ---
 - ### [Example](./Intro_Event.html)
-- ### [Number Counter](./button_counter.html)
+- ### [Number Counter](./numberCounter/button_counter.html)
 - ### [Task / Exercise](./TASK/task.html)
 ---
 
