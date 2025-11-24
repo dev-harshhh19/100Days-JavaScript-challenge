@@ -56,8 +56,8 @@ form.addEventListener('submit', function(event) {
     - And much more!
 ---
 - ### [Example](./Intro_Event.html)
-- ### [Number Counter](./numberCounter/button_counter.html)
-- ### [Task / Exercise](./TASK/task.html)
+- ### [Number Counter](./numberCounter/)
+- ### [Task / Exercise](./TASK/)
 ---
 
 # Summery of Day 44
