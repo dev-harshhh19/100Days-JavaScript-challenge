@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Example</title>
+</head>
+
+<body>
+    <button id="add">Add Item</button>
+    <ul id="items">
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+
+
+    <script>
+        const list = document.getElementById('items');
+        const addBtn = document.getElementById('add');
+
+
+        list.addEventListener('click', function (event) {
+            if (event.target.tagName === 'LI') {
+                alert('Clicked: ' + event.target.textContent);
+            }
+        });
+
+
+        addBtn.addEventListener('click', function () {
+            const li = document.createElement('li');
+            li.textContent = 'Item ' + (list.children.length + 1);
+            list.appendChild(li);
+        });
+    </script>
+</body>
+
+</html>
