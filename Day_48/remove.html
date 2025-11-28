@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Element from DOM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Remove Element from DOM</h1>
+    <ul id="todo">
+        <li>Learn JS</li>
+        <li>Practice DOM</li>
+        <li>Build projects</li>
+    </ul>
+    <script>
+        // Using removeChild to remove the second item
+        const todoList = document.getElementById('todo');
+        const secondItem = todoList.children[1];
+        todoList.removeChild(secondItem);
+        // Delete the last item:
+        const list = document.getElementById('todo');
+        list.lastElementChild.remove();
+    </script>
+</body>
+
+</html>
