@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete List Items on Button Click</title>
+</head>
+
+<body>
+    <ul id="todo">
+        <li>Comeplete Assignment <button class="delete-btn">Delete</button>
+        <li>Read a book <button class="delete-btn">Delete</button>
+        <li>Go for a walk <button class="delete-btn">Delete</button>
+    </ul>
+    <script>
+        document.querySelectorAll('.delete-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                btn.parentElement.remove();
+            });
+        });
+    </script>
+</body>
+
+</html>
