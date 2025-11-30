@@ -1,0 +1,45 @@
+/* CSS for Light/Dark Mode Toggle */
+body {
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: black;
+    color: white;
+}
+button {
+    padding: 10px 20px;
+    margin: 20px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #ddd;
+}
+button:active {
+    background-color: #ccc;
+}
+button:focus {
+    outline: none;
+}
+button.dark-mode {
+    background-color: #444;
+    color: white;
+}
+button.dark-mode:hover {
+    background-color: #555;
+}
+button.dark-mode:active {
+    background-color: #666;
+}
+button.dark-mode:focus {
+    outline: none;
+}
+div.container {
+    text-align: center;
+    margin-top: 50px;
+}
+h1 {
+    font-size: 2em;
+}
