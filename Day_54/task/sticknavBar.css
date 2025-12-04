@@ -1,0 +1,131 @@
+/* 
+<header id="navbar">
+        <h2>My Sticky Navbar</h2>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+*/
+
+:root{
+    --nav-bg-color: #ffffff;
+    --nav-scrolled-bg-color: #4a90e2;
+    --nav-text-color: #333333;
+    --nav-scrolled-text-color: #ffffff; 
+}
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f0f2f5;
+}
+
+header{
+    background:#4a90e2;
+    padding:40px 20px;
+    text-align:center;
+    color:rgb(0, 0, 0);
+    font-size:1.5rem;
+}
+
+#navbar{
+    background:var(--nav-bg-color);
+    padding:15px 0;
+    transition:box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+#navbar.sticky{
+    position:fixed;
+    top:0;
+    width:100%;
+    left:0;
+    box-shadow:0 2px 5px rgba(0,0,0,0.2);
+    z-index:1000;
+}
+
+#navbar.scrolled{
+    background-color:var(--nav-scrolled-bg-color);
+    color:var(--nav-scrolled-text-color);
+}
+
+#navbar.scrolled a{
+    color:var(--nav-scrolled-text-color);
+}
+
+#navbar.sticky a{
+    color:var(--nav-text-color);
+}
+
+#navbar nav{
+    display:flex;
+    justify-content:center;
+    gap:0;
+}
+
+#navbar nav a{
+    text-decoration:none;
+    color:var(--nav-text-color);
+    font-weight:500;
+    margin:0 20px;
+    transition:color 0.3s ease;
+}
+
+#navbar nav a:hover{
+    color:#4a90e2;
+}
+
+.container{
+    max-width:800px;
+    margin:80px auto;
+    padding:0 20px;
+    line-height:1.6;
+    color:#333333;
+}
+
+.content-section{
+    max-width:900px;
+    margin:auto;
+    margin-bottom:40px;
+}
+
+.content-section h2{
+    margin-top:0;
+}
+
+.content-section p{
+    margin-bottom:16px;
+}
+
+.content-section:last-child{
+    margin-bottom:80px;
+}
+
+.content-section h2{
+    margin-bottom:20px;
+}
+
+.content-section p{
+    margin-bottom:16px;
+}
+
+.content-section:last-child{
+    margin-bottom:80px;
+}
+
