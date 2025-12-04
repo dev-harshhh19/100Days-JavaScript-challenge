@@ -126,6 +126,8 @@ document.addEventListener('scroll', onScroll);
 ![](https://mermaid.ink/img/pako:eNrFUktrGzEQ_itiTi14Tfbt1SEQ7BZ6aaFNCZSFoqwUWVg748pS4tb4v3e16YYGJyE99aYZvtdo5gAdSQUckiRpsSO8MZq3yJgl2nC2FihXTtxhbPm16hVnTsmwTzqy5FocaTv1Iyjs1MoI7UQfsYyJ4AlDf63cfb0VzpvObAV69nX3VPdy7ch7q76_D9h5Q3gKuRLGX5r-KfZSWHstuk37hxY9WHJ-firL2btbFf2c0VoN49wTTnAje5Ll7HNA9ubCWrpT8u1LlIeQnH3xQ0K2JLKS4if-czS2Cs6g_kviGd8oF3U5-6CRxqH-g9nD6M85TtLs0-20xJcCflR7_zjl63d1oYVBmIF2RgL3LqgZDMl6EUs4RKEWxptugQ9PKdymhRaPA2e4qG9E_URzFPR6KsJWCj_dOvAbYXcRolAqt6SAHnhaFqMG8APsgWdZM1_kVZ7WRdPkabqYwc8BlFfzrKqbvKiLvGzqOjvO4NfoejYvF0VVnlVNmWd5UxTp8TcbAzrj?type=png)
 
 ---
+## Examples
+
 **[Debounce](./debounce/)**
 
 **[Throttle](./throttle/)**
