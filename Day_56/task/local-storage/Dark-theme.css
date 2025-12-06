@@ -1,0 +1,73 @@
+/* 
+<div>
+      <p id="message">Demonstrates Session Storage</p>
+        <h1>Dark Mode Example</h1>
+        <button id="toggle-theme">Toggle Dark Mode</button>
+    </div>
+*/
+
+
+body {
+    background-color: #f4f4f4;
+    color: #222;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    transition: background 0.4s, color 0.4s;
+}
+
+body.dark-mode {
+    background-color: #181a1b !important;
+    color: #e0e0e0 !important;
+}
+
+h1 {
+    margin-bottom: 20px;
+    transition: color 0.4s;
+}
+
+body.dark-mode h1 {
+    color: #ffb300;
+}
+
+#message {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    transition: color 0.4s;
+}
+
+body.dark-mode #message {
+    color: #90caf9;
+}
+
+
+
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #e0e0e0;
+    color: #222;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode button {
+    background-color: #23272f;
+    color: #ffb300;
+}
+
+button:hover {
+    background-color: #bdbdbd;
+}
+
+body.dark-mode button:hover {
+    background-color: #424242;
+}
+
