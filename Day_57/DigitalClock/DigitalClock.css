@@ -1,0 +1,79 @@
+body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    transition: background 0.4s, color 0.4s;
+    position: relative;
+}
+
+#toggle-theme {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+body.dark-mode {
+    background-color: #000000 !important;
+    color: #00ff00 !important;
+}
+
+h1 {
+    margin-bottom: 20px;
+    transition: color 0.4s;
+}
+
+body.dark-mode h1 {
+    color: #00ff00;
+}
+
+#clock h3 {
+    display: inline-block;
+    margin: 0 5px;
+    font-size: 3em;
+    transition: color 0.4s;
+}
+
+body.dark-mode #clock h3 {
+    color: #00ff00;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    color: #000000;
+    border: 2px solid #cccccc;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, border-color 0.3s, transform 0.2s;
+}
+
+body.dark-mode button {
+    background-color: #23272f;
+    border-color: #00ff00;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background-color: #e0e0e0;
+}
+
+body.dark-mode button:hover {
+    background-color: #2a2e36;
+    transform: scale(1.1);
+}
+
+.toggle-button {
+    margin-top: 20px;
+}
