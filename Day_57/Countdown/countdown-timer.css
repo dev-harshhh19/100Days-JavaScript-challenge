@@ -1,0 +1,144 @@
+/* 
+<div id="countdown-timer">
+        <h1>Countdown Timer</h1>
+        <input type="number" id="minutes-input" placeholder="Enter minutes" min="0">
+        <button id="start-button">Start</button>
+        <h2 id="timer-display">00:00</h2>
+    </div>
+*/
+
+:root {
+    --bg-color: #f4f4f4;
+    --text-color: #222222;
+    --dark-bg-color: #181a1b;
+    --dark-text-color: #e0e0e0;
+    --highlight-color: #ff5722;
+    --dark-highlight-color: #ffb300;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    transition: background 0.4s, color 0.4s;
+    position: relative;
+}
+
+#toggle-theme {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+body.dark-mode {
+    background-color: var(--dark-bg-color) !important;
+    color: var(--dark-text-color) !important;
+}
+
+h1 {
+    margin-bottom: 20px;
+    transition: color 0.4s;
+}
+
+body.dark-mode h1 {
+    color: var(--dark-highlight-color);
+}
+
+#timer-display {
+    font-size: 4em;
+    margin: 20px 0;
+    transition: color 0.4s;
+}
+
+body.dark-mode #timer-display {
+    color: var(--dark-highlight-color);
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #e0e0e0;
+    color: #222;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#theme-button {
+    padding: 10px 15px;
+    font-size: 24px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    border: 2px solid #cccccc;
+}
+
+#theme-button:hover {
+    transform: scale(1.1);
+}
+
+body.dark-mode #theme-button {
+    background-color: #23272f;
+    border-color: #ffb300;
+}
+
+body.dark-mode #theme-button:hover {
+    background-color: #2a2e36;
+    transform: scale(1.1);
+}
+
+body.dark-mode button {
+    background-color: #23272f;
+    color: var(--dark-highlight-color);
+}
+
+input[type="number"] {
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode input[type="number"] {
+    background-color: #23272f;
+    color: var(--dark-text-color);
+    border-color: #555;
+}
+
+button:hover {
+    background-color: #bdbdbd;
+}
+
+body.dark-mode button:hover {
+    background-color: #424242;
+}
+
+input[type="number"]:hover {
+    background-color: #d4d4d4;
+}
+
+body.dark-mode input[type="number"]:hover {
+    background-color: #2a2e36;
+}
+
+input[type="number"]::placeholder {
+    color: #888;
+}
+
+body.dark-mode input[type="number"]::placeholder {
+    color: #bbb;
+}
+
