@@ -25,7 +25,7 @@ A functional sign-up form with comprehensive input validation using regular expr
 - `signUpForm.html` - HTML structure with semantic form elements
 - `form.css` - Styling with CSS variables for theme support
 - `formValidation.js` - Regex validation logic and DOM manipulation
-
+ 
 ## Validation Rules
 
 ### Username
