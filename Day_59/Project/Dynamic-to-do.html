@@ -1,0 +1,34 @@
+<!-- DOM + LocalStorage -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic To-Do List</title>
+    <link rel="stylesheet" href="Dynamic-to-do.css">
+</head>
+<body>
+    <header class="header">
+        <h1>My To-Do List</h1>  
+    </header>
+    <main>
+        <button id="toggle-theme" aria-label="Toggle theme">☀️</button>
+        <div class="todo-container">
+            <input type="text" id="todo-input" placeholder="Add a new task...">
+            <button id="add-btn">Add</button>
+        </div>
+        <div class="tasks-container">
+            <ul id="tasks-list">
+                <!-- Tasks will be dynamically added here -->
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025-26 My To-Do App</p>
+        <div class="credit">
+            <a href="https://www.harshadnikam.me/">Harshad Nikam - Portfolio</a>
+        </div>
+    </footer>
+    <script src="Dynamic-to-do.js"></script>
+</body>
+</html>
