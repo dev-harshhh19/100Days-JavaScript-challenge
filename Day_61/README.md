@@ -254,3 +254,16 @@ async function readStream(url) {
     }
 }
 ```
+- This example reads data from a stream asynchronously, processing chunks as they arrive.
+---
+[Task](./Task/README.md)
+---
+# Summary
+- The difference between synchronous and asynchronous programming.
+- How the event loop, call stack, and task queues work together.
+- How async/await simplifies asynchronous code.
+- Advanced async patterns for better performance.
+- Error handling in async functions.
+- Real-world applications of async programming in JavaScript.
+- Handling async streams.
+---
