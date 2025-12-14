@@ -1,0 +1,41 @@
+{
+  "department": "Computer Science",
+  "total": 5,
+  "students": [
+    {
+      "id": 1,
+      "name": "Harshad Nikam",
+      "age": 21,
+      "email": "harshad.nikam@cs.example.com",
+      "year": "Third Year"
+    },
+    {
+      "id": 2,
+      "name": "Priyanka Kumari",
+      "age": 20,
+      "email": "priyanka.kumari@cs.example.com",
+      "year": "Second Year"
+    },
+    {
+      "id": 3,
+      "name": "Dayanand Rane",
+      "age": 22,
+      "email": "dayanand.rane@cs.example.com",
+      "year": "Final Year"
+    },
+    {
+      "id": 4,
+      "name": "Aksh Naik",
+      "age": 19,
+      "email": "aksh.naik@cs.example.com",
+      "year": "First Year"
+    },
+    {
+      "id": 5,
+      "name": "Sanskar Gaikwad",
+      "age": 21,
+      "email": "sanskar.gaikwad@cs.example.com",
+      "year": "Third Year"
+    }
+  ]
+}
