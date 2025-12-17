@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add New Post</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Add New Post</h1>
+
+    <form id="postForm">
+      <label for="title">Post Title</label>
+      <input
+        type="text"
+        id="title"
+        placeholder="Enter post title"
+        required
+      />
+
+      <label for="body">Post Body</label>
+      <textarea
+        id="body"
+        rows="5"
+        placeholder="Enter post content"
+        required
+      ></textarea>
+
+      <button type="submit">Create Post</button>
+    </form>
+
+    <div id="response"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
