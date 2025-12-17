@@ -94,7 +94,8 @@ createUser();
 | PUT    | Update data     | YES    | Edit profile    |
 | DELETE | Remove data     | NO    | Delete item     |
 ---
-
+[TASK:](../Day_67/TASK/README.md)
+---
 # Summary
 - Use `POST` to create new resources.
 - Use `PUT` to update existing resources.
