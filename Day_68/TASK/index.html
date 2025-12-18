@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ES6 Modules - API Example</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>ES6 Modules - API Integration</h1>
+    <p>API logic separated into <code>api.js</code> module</p>
+
+    <div class="button-group">
+      <button id="fetch-posts-btn">Fetch Posts</button>
+      <button id="fetch-users-btn">Fetch Users</button>
+      <button id="create-post-btn">Create New Post</button>
+    </div>
+
+    <div class="content">
+      <section>
+        <h2>Posts</h2>
+        <div id="posts-container" class="posts-container">
+          <!-- Posts will be displayed here -->
+        </div>
+      </section>
+
+      <section>
+        <h2>Users</h2>
+        <div id="users-container" class="users-container">
+          <!-- Users will be displayed here -->
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- Import script as a module -->
+  <script type="module" src="script.js"></script>
+</body>
+</html>
