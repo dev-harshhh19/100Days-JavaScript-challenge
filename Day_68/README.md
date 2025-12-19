@@ -22,7 +22,7 @@ export default function greet(name) {
   return `Hello, ${name}!`;
 }
 ```
----
+--- 
 
 ## Mixing Default + Named Exports
 You can mix default and named exports in a single module.
