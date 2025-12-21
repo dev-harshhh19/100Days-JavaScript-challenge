@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote & Joke Generator - Day 71</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Random Quote & Joke Generator</h1>
+        
+        <!-- Quote Section -->
+        <div class="section quote-section">
+            <h2>Random Quote</h2>
+            <div id="quote-container" class="content-box">
+                <div class="spinner" id="quote-spinner" style="display: none;"></div>
+                <p id="quote-text" class="quote-text">Click the button to get an inspiring quote!</p>
+                <p id="quote-author" class="quote-author"></p>
+            </div>
+            <div class="action-buttons">
+                <button id="quote-btn" class="btn btn-quote">Get New Quote</button>
+                <button id="quote-bookmark" class="btn-icon" title="Bookmark this quote">★</button>
+                <button id="quote-share" class="btn-icon" title="Share quote">Share</button>
+            </div>
+        </div>
+
+        <!-- Joke Section -->
+        <div class="section joke-section">
+            <h2>Random Joke</h2>
+            <div id="joke-container" class="content-box">
+                <div class="spinner" id="joke-spinner" style="display: none;"></div>
+                <p id="joke-setup" class="joke-setup">Click the button to hear a joke!</p>
+                <p id="joke-punchline" class="joke-punchline"></p>
+            </div>
+            <div class="action-buttons">
+                <button id="joke-btn" class="btn btn-joke">Get New Joke</button>
+                <button id="joke-bookmark" class="btn-icon" title="Bookmark this joke">★</button>
+                <button id="joke-share" class="btn-icon" title="Share joke">Share</button>
+            </div>
+        </div>
+
+        <!-- History Section -->
+        <div class="section history-section">
+            <h2>History</h2>
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="quote-history">Quotes</button>
+                <button class="tab-btn" data-tab="joke-history">Jokes</button>
+            </div>
+            <div id="quote-history" class="tab-content active">
+                <div class="history-list" id="quote-history-list">
+                    <p class="empty-state">No quotes in history yet</p>
+                </div>
+                <button id="clear-quote-history" class="btn-clear">Clear Quote History</button>
+            </div>
+            <div id="joke-history" class="tab-content">
+                <div class="history-list" id="joke-history-list">
+                    <p class="empty-state">No jokes in history yet</p>
+                </div>
+                <button id="clear-joke-history" class="btn-clear">Clear Joke History</button>
+            </div>
+        </div>
+
+        <!-- Favorites Section -->
+        <div class="section favorites-section">
+            <h2>Favorites</h2>
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="quote-favorites">Quotes</button>
+                <button class="tab-btn" data-tab="joke-favorites">Jokes</button>
+            </div>
+            <div id="quote-favorites" class="tab-content active">
+                <div class="favorites-list" id="quote-favorites-list">
+                    <p class="empty-state">No favorite quotes yet</p>
+                </div>
+            </div>
+            <div id="joke-favorites" class="tab-content">
+                <div class="favorites-list" id="joke-favorites-list">
+                    <p class="empty-state">No favorite jokes yet</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <!-- Share Modal -->
+    <div id="share-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Share on Social Media</h3>
+            <div class="share-buttons">
+                <button class="share-btn twitter" data-platform="twitter">
+                    Twitter
+                </button>
+                <button class="share-btn facebook" data-platform="facebook">
+                    Facebook
+                </button>
+                <button class="share-btn whatsapp" data-platform="whatsapp">
+                    WhatsApp
+                </button>
+                <button class="share-btn copy" data-platform="copy">
+                    Copy Link
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
