@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 72 - AbortController Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AbortController Demo</h1>
+        <p class="subtitle">Cancel Fetch Requests</p>
+
+        <div class="demo-section">
+            <!-- Control Buttons -->
+            <div class="controls">
+                <button id="fetchUserBtn" class="btn btn-primary">Fetch User</button>
+                <button id="fetchPostsBtn" class="btn btn-secondary">Fetch Posts</button>
+                <button id="fetchCommentsBtn" class="btn btn-tertiary">Fetch Comments</button>
+                <button id="cancelBtn" class="btn btn-danger">Cancel</button>
+            </div>
+
+            <!-- Status Display -->
+            <div class="status-container">
+                <div class="status-box">
+                    <span class="label">Status</span>
+                    <span id="statusValue" class="value idle">Idle</span>
+                </div>
+                <div class="status-box">
+                    <span class="label">Request</span>
+                    <span id="requestType" class="value idle">None</span>
+                </div>
+                <div class="status-box">
+                    <span class="label">Time</span>
+                    <span id="requestTime" class="value idle">0ms</span>
+                </div>
+            </div>
+
+            <!-- Loading Indicator -->
+            <div id="loadingIndicator" class="loading-indicator hidden">
+                <div class="spinner"></div>
+                <span>Fetching data...</span>
+            </div>
+
+            <!-- Response Area -->
+            <div class="response-container">
+                <div id="responseContent" class="response-content">
+                    <p class="placeholder">Click a button to fetch data</p>
+                </div>
+            </div>
+
+            <!-- Log Container -->
+            <div class="log-container">
+                <div id="logContent" class="log-content">
+                    <div class="log-entry info">Ready to fetch data...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
