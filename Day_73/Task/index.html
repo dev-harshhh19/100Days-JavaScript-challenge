@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 73 - Rate Limits & Throttling</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>API Rate Limits & Throttling</h1>
+        <p class="subtitle">Handle 429 Errors & Control Request Frequency</p>
+
+        <div class="demo-section">
+            <!-- Search Section -->
+            <div class="section">
+                <h2>Search Demo (Debounced)</h2>
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        placeholder="Type to search (debounced after 500ms)..."
+                        class="search-input"
+                    >
+                </div>
+                <div id="searchStatus" class="status-message info hidden">Searching...</div>
+                <div id="searchResults" class="results-area"></div>
+            </div>
+
+            <!-- Rate Limit Section -->
+            <div class="section">
+                <h2>Rate Limit Demo</h2>
+                <div class="button-group">
+                    <button id="rapidRequestBtn" class="btn btn-primary">Rapid Requests</button>
+                    <button id="throttledRequestBtn" class="btn btn-secondary">Throttled Requests</button>
+                    <button id="resetBtn" class="btn btn-tertiary">Reset</button>
+                </div>
+            </div>
+
+            <!-- Status Display -->
+            <div class="section">
+                <h2>Status</h2>
+                <div class="status-container">
+                    <div class="status-box">
+                        <span class="label">Requests Made</span>
+                        <span id="requestCount" class="value">0</span>
+                    </div>
+                    <div class="status-box">
+                        <span class="label">Rate Limited</span>
+                        <span id="rateLimitStatus" class="value normal">No</span>
+                    </div>
+                    <div class="status-box">
+                        <span class="label">Retry After</span>
+                        <span id="retryAfter" class="value">-</span>
+                    </div>
+                </div>
+                <div id="rateLimitWarning" class="status-message warning hidden">
+                    Rate limit exceeded. Please wait before making more requests.
+                </div>
+            </div>
+
+            <!-- Log -->
+            <div class="section">
+                <h2>Activity Log</h2>
+                <div id="logContainer" class="log-container">
+                    <div class="log-entry">Ready to demonstrate rate limiting</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="throttle-debounce.js"></script>
+    <script src="rate-limit-handler.js"></script>
+    <script src="demo.js"></script>
+</body>
+</html>
