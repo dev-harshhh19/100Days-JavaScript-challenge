@@ -65,3 +65,11 @@ Detect 429 status code and implement backoff strategy. Inform user about rate li
 ---
 [Task](../Day_73/Task/README.md)
 ---
+
+# Summary
+- API Rate Limits are essential for protecting server resources and ensuring fair usage among users.
+- Throttling and debouncing are two techniques used to control the rate of function execution, each serving different purposes.
+- The HTTP 429 status code indicates that the client has exceeded the allowed number of requests in a given time frame.
+- Implementing proper handling for rate limits and throttling can improve application performance and user experience.
+- Understanding and respecting API rate limits is crucial for maintaining access to third-party services and avoiding potential penalties.
+- ---
