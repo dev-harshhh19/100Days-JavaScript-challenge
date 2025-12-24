@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 1: Basic Pagination</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Task 1: Basic Pagination</h1>
+      <p class="subtitle">Navigate through posts using pagination controls</p>
+    </header>
+
+    <div class="stats-bar">
+      <div class="stat">
+        <span class="label">Current Page:</span>
+        <span class="value" id="currentPage">1</span>
+      </div>
+      <div class="stat">
+        <span class="label">Total Pages:</span>
+        <span class="value" id="totalPages">0</span>
+      </div>
+      <div class="stat">
+        <span class="label">Total Posts:</span>
+        <span class="value" id="totalPosts">0</span>
+      </div>
+    </div>
+
+    <div class="content">
+      <div id="postsContainer" class="posts-grid"></div>
+      <div id="loading" class="loading">
+        <div class="spinner"></div>
+        <p>Loading posts...</p>
+      </div>
+    </div>
+
+    <div class="pagination-controls">
+      <button id="firstBtn" class="btn btn-control">First</button>
+      <button id="prevBtn" class="btn btn-control">Previous</button>
+      
+      <div class="page-numbers" id="pageNumbers"></div>
+      
+      <button id="nextBtn" class="btn btn-control">Next</button>
+      <button id="lastBtn" class="btn btn-control">Last</button>
+    </div>
+
+    <div class="info-box">
+      <h3>Tips:</h3>
+      <ul>
+        <li>Use arrow keys to navigate pages</li>
+        <li>Click page numbers to jump directly</li>
+        <li>Watch the stats bar for current state</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="pagination.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
