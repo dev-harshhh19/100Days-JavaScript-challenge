@@ -1,0 +1,8 @@
+/* Main CSS Connector File */
+/* Imports all modular CSS files */
+
+@import url('./css/main.css');
+@import url('./css/weather.css');
+@import url('./css/forecast.css');
+@import url('./css/effects.css');
+@import url('./css/theme.css');
