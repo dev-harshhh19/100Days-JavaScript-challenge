@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .content-section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 50px 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+            max-width: 800px;
+            width: 90%;
+            margin: 20px auto;
+            backdrop-filter: blur(15px);
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .content-section h1 {
+            color: #667eea;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+        }
+
+        .content-section h2 {
+            color: #333;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .content-section p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+
+        .content-section ul {
+            color: #555;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .content-section li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .tech-stack {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .tech-item {
+            background: rgba(102, 126, 234, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            border: 2px solid #667eea;
+        }
+
+        .tech-item strong {
+            color: #667eea;
+        }
+
+        body.dark-theme .content-section {
+            background: rgba(30, 30, 30, 0.95);
+            color: white;
+        }
+
+        body.dark-theme .content-section h1,
+        body.dark-theme .content-section h2 {
+            color: #667eea;
+        }
+
+        body.dark-theme .content-section p,
+        body.dark-theme .content-section li {
+            color: #bbb;
+        }
+
+        body.dark-theme .tech-item {
+            background: rgba(102, 126, 234, 0.1);
+            border-color: #667eea;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <h2>Weather App</h2>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link active">About</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+        <button id="toggle-theme" class="theme-btn">Dark Mode</button>
+    </nav>
+
+    <div class="weather-app">
+        <div class="background" id="background"></div>
+
+        <div class="content-section">
+            <h1>About Weather App</h1>
+
+            <h2>Overview</h2>
+            <p>A modern, real-time weather application built with clean, modular JavaScript. Get accurate weather data with a beautiful, responsive interface.</p>
+
+            <h2>Key Features</h2>
+            <ul>
+                <li>Real-time weather from OpenWeatherMap API</li>
+                <li>7-day forecast</li>
+                <li>Temperature unit conversion</li>
+                <li>Dark/Light theme</li>
+                <li>Recent search history</li>
+                <li>Weather animations</li>
+            </ul>
+
+            <h2>Technology Stack</h2>
+            <div class="tech-stack">
+                <div class="tech-item"><strong>HTML5</strong></div>
+                <div class="tech-item"><strong>CSS3</strong></div>
+                <div class="tech-item"><strong>JavaScript</strong></div>
+                <div class="tech-item"><strong>OpenWeatherMap API</strong></div>
+                <div class="tech-item"><strong>LocalStorage</strong></div>
+                <div class="tech-item"><strong>Responsive Design</strong></div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module">
+        import storage from './js/storage.js';
+
+        const themeBtn = document.getElementById('toggle-theme');
+        const theme = storage.getTheme();
+        
+        if (theme === 'dark') {
+            document.body.classList.add('dark-theme');
+            themeBtn.textContent = 'Light Mode';
+        }
+
+        themeBtn.addEventListener('click', function() {
+            const isDark = document.body.classList.toggle('dark-theme');
+            storage.setTheme(isDark ? 'dark' : 'light');
+            this.textContent = isDark ? 'Light Mode' : 'Dark Mode';
+        });
+    </script>
+</body>
+</html>
