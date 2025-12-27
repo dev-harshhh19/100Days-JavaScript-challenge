@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retry Fetch Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="card">
+        <h1>Retry Fetch (3 attempts)</h1>
+        <p class="desc">Click fetch to try an API call. If it fails, the script retries up to three times before surfacing the error.</p>
+
+        <div class="grid">
+            <div>
+                <label for="url">API URL</label>
+                <input id="url" type="text" value="https://jsonplaceholder.typicode.com/posts/1" autocomplete="off">
+            </div>
+
+            <div class="actions">
+                <button id="fetchBtn">Fetch</button>
+                <button id="failBtn" class="secondary">Use a failing URL</button>
+            </div>
+
+            <div class="status">
+                <div class="panel">
+                    <h3>Attempts</h3>
+                    <pre id="attempts">No attempts yet.</pre>
+                </div>
+                <div class="panel">
+                    <h3>Result</h3>
+                    <pre id="result">Waiting to run…</pre>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
