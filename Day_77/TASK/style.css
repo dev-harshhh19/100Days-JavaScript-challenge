@@ -1,0 +1,137 @@
+:root {
+    --bg: #0b1224;
+    --panel: #111a33;
+    --accent: #2dd4bf;
+    --text: #e5e7eb;
+    --muted: #9ca3af;
+    --border: #1f2a44;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Manrope", "Segoe UI", sans-serif;
+    background: radial-gradient(circle at 20% 20%, #102040, #0b1224 45%),
+        radial-gradient(circle at 80% 0%, #0e1b30, #0b1224 40%),
+        var(--bg);
+    color: var(--text);
+    display: grid;
+    place-items: center;
+    padding: 48px 16px;
+}
+
+.card {
+    width: min(960px, 100%);
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+}
+
+h1 {
+    margin: 0 0 12px;
+    letter-spacing: -0.02em;
+}
+
+p.desc {
+    margin: 0 0 20px;
+    color: var(--muted);
+}
+
+.grid {
+    display: grid;
+    gap: 16px;
+}
+
+label {
+    font-size: 0.95rem;
+    color: var(--muted);
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: #0c1427;
+    color: var(--text);
+    outline: none;
+}
+
+.actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+button {
+    border: none;
+    border-radius: 12px;
+    padding: 12px 16px;
+    background: var(--accent);
+    color: #0b1224;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 120ms ease, box-shadow 120ms ease, opacity 150ms ease;
+    box-shadow: 0 10px 30px rgba(45, 212, 191, 0.22);
+}
+
+button.secondary {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border);
+    box-shadow: none;
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.status {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.panel {
+    border: 1px dashed var(--border);
+    border-radius: 12px;
+    padding: 12px;
+    min-height: 140px;
+    background: #0c1427;
+}
+
+.panel h3 {
+    margin: 0 0 8px;
+    font-size: 0.95rem;
+    color: var(--muted);
+}
+
+pre {
+    margin: 0;
+    white-space: pre-wrap;
+    word-break: break-word;
+    font-family: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+    color: var(--text);
+}
+
+@media (max-width: 800px) {
+    .status {
+        grid-template-columns: 1fr;
+    }
+
+    body {
+        padding: 24px 14px;
+    }
+}
