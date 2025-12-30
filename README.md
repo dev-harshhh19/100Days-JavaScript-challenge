@@ -117,6 +117,7 @@
 
 [![GitHub](https://img.shields.io/badge/GitHub-dev--harshhh19-181717?style=for-the-badge&logo=github)](https://github.com/dev-harshhh19)
 [![Portfolio](https://img.shields.io/badge/Portfolio-harshadnikam.me-000?style=for-the-badge&logo=vercel)](https://harshadnikam.me)
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/dev.harshhh)
 
 ---
 
