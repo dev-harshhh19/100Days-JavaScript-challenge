@@ -1,0 +1,82 @@
+/* Expenses List Styles */
+
+.expenses-container {
+    padding: 28px 20px;
+}
+
+.expenses-container h2 {
+    color: #1f2933;
+    margin-bottom: 18px;
+    font-size: 1.3em;
+}
+
+.expenses-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.expense-item {
+    background: #ffffff;
+    padding: 15px;
+    border-left: 4px solid #2563eb;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    animation: slideIn 0.25s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.expense-details {
+    flex: 1;
+}
+
+.expense-description {
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 6px;
+    font-size: 1em;
+}
+
+.expense-category {
+    display: inline-block;
+    background: #e0e7ff;
+    color: #2563eb;
+    padding: 4px 10px;
+    border-radius: 16px;
+    font-size: 0.75em;
+    margin-bottom: 6px;
+}
+
+.expense-info {
+    color: #6b7280;
+    font-size: 0.85em;
+}
+
+.expense-amount {
+    font-weight: 700;
+    color: #2563eb;
+    font-size: 1.2em;
+    min-width: 80px;
+    text-align: right;
+}
+
+.empty-state {
+    text-align: center;
+    color: #9ca3af;
+    padding: 40px 20px;
+    font-size: 1em;
+}
