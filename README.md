@@ -90,10 +90,7 @@
 | 78 | API Service Pattern | Organizing API calls cleanly | [View](Day_78/README.md) |
 | 79 | Async Debugging & Performance | Debugging async code | [View](Day_79/README.md) |
 | 80 | GitHub User Finder | GitHub API integration project | [View](Day_80/README.md) |
-| 81 - 84 | Expense Tracker ( Project ) |  | [View](Day_81-84/README.md) |
-| 82 | Coming Soon | - | - |
-| 83 | Coming Soon | - | - |
-| 84 | Coming Soon | - | - |
+| 81-84 | Expense Tracker (Project) | A complete expense tracking application built with vanilla JavaScript using **ES6 Modules**. | [View](Day_81-84/README.md) |
 | 85 | Coming Soon | - | - |
 | 86 | Coming Soon | - | - |
 | 87 | Coming Soon | - | - |
