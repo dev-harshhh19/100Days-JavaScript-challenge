@@ -3,7 +3,7 @@
 A complete expense tracking application built with vanilla JavaScript using **ES6 Modules**.
 
 ## Features
-
+ 
 - Clean, modern UI with gradient design
 - Add expenses with description, amount, and category
 - Form validation with error messages
