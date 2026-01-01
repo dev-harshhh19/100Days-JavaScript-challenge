@@ -1,71 +1,57 @@
 # Day 81-84: Expense Tracker
 
-A complete expense tracking application built with vanilla JavaScript using **ES6 Modules**.
+A complete expense tracking application built with vanilla JavaScript using ES6 Modules.
+
+## Day 81: Project Setup & ES6 Modules
+
+- Set up modular project structure
+- Created `script.js` as main entry point importing other modules
+- Created `style.css` as main stylesheet importing CSS modules
+- Implemented form validation and expense adding
+
+## Day 82: Local Storage Integration
+
+- Added `localStorage` to persist expenses across sessions
+- Expenses auto-save on add/delete
+- Expenses auto-load on page refresh
 
 ## Features
- 
-- Clean, modern UI with gradient design
+
 - Add expenses with description, amount, and category
 - Form validation with error messages
-- Responsive design for all devices
-- Real-time expense display
+- Local Storage persistence
+- Responsive design
 
 ## Project Structure
 
 ```
 Day_81-84/
-├── index.html          ← Main HTML file
-├── style.css           ← Main CSS (imports modules)
-├── script.js           ← Main JS (imports modules)
+├── index.html
+├── style.css           ← imports CSS modules
+├── script.js           ← imports JS modules
 ├── css/
-│   ├── base.css        ← Reset & base styles
-│   ├── header.css      ← Header styles
-│   ├── form.css        ← Form & button styles
-│   ├── expenses.css    ← Expense list styles
-│   └── responsive.css  ← Media queries
+│   ├── base.css
+│   ├── header.css
+│   ├── form.css
+│   ├── expenses.css
+│   └── responsive.css
 └── Js/
-    ├── validation.js   ← Input validation
-    ├── expenseManager.js ← Expense CRUD operations
-    └── ui.js           ← DOM manipulation
+    ├── validation.js
+    ├── expenseManager.js
+    └── ui.js
 ```
-
-## Modular Architecture
-
-### CSS Modules (using `@import`)
-| Module | Purpose |
-|--------|---------|
-| `base.css` | Reset, body, container |
-| `header.css` | Header section |
-| `form.css` | Form, inputs, buttons, errors |
-| `expenses.css` | Expense list & items |
-| `responsive.css` | Mobile breakpoints |
-
-### JS Modules (using `import/export`)
-| Module | Exports |
-|--------|---------|
-| `validation.js` | `validateExpenseInput()` |
-| `expenseManager.js` | `createExpense()`, `addExpense()`, `getExpenses()`, `deleteExpense()`, `clearAllExpenses()` |
-| `ui.js` | `showError()`, `clearError()`, `resetForm()`, `renderExpenses()`, `capitalize()` |
 
 ## How to Run
 
-1. Start a local server: `npx serve`
+1. `npx serve`
 2. Open `http://localhost:3000/Day_81-84/`
-3. Add expenses using the form
 
-## Key Concepts Covered
+## Key Concepts
 
-- **ES6 Modules**: `import` / `export` for code organization
-- **CSS `@import`**: Modular stylesheet architecture
-- **Form Handling**: `preventDefault()`, validation, reset
-- **DOM Manipulation**: `getElementById()`, `addEventListener()`, `innerHTML`
-- **Array Methods**: `push()`, `filter()`, `map()`
-- **Template Literals**: Dynamic HTML generation
-
-## Technologies Used
-
-- HTML5
-- CSS3 (Flexbox, Animations, Media Queries)
-- Vanilla JavaScript (ES6+ Modules)
+- ES6 Modules (`import` / `export`)
+- CSS `@import`
+- `localStorage` API
+- Form handling & validation
+- DOM manipulation
 
 ---
