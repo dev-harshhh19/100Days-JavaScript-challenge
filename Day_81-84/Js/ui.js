@@ -19,14 +19,14 @@ export function resetForm(form, focusElement) {
     focusElement.focus();
 }
 
-export function renderExpenses(listElement, expenses) {
+export function renderExpenses(listElement, expenses, onDelete) {
     if (expenses.length === 0) {
         listElement.innerHTML = '<p class="empty-state">No expenses added yet. Add one to get started.</p>';
         return;
     }
 
     listElement.innerHTML = expenses.map(expense => `
-        <div class="expense-item">
+        <div class="expense-item" data-id="${expense.id}">
             <div class="expense-details">
                 <div class="expense-description">${expense.description}</div>
                 <div>
@@ -34,7 +34,20 @@ export function renderExpenses(listElement, expenses) {
                 </div>
                 <div class="expense-info">${expense.date}</div>
             </div>
-            <div class="expense-amount">$${expense.amount.toFixed(2)}</div>
+            <div class="expense-actions">
+                <div class="expense-amount">$${expense.amount.toFixed(2)}</div>
+                <button class="btn-delete" data-id="${expense.id}">Delete</button>
+            </div>
         </div>
     `).join('');
+
+    // Add delete event listeners
+    if (onDelete) {
+        listElement.querySelectorAll('.btn-delete').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const id = parseInt(e.target.dataset.id);
+                onDelete(id);
+            });
+        });
+    }
 }
