@@ -15,9 +15,17 @@ A complete expense tracking application built with vanilla JavaScript using ES6 
 - Expenses auto-save on add/delete
 - Expenses auto-load on page refresh
 
+## Day 83: Delete Functionality
+
+- Added delete button to each expense item
+- Implemented `handleDeleteExpense()` in script.js
+- Used event delegation with `data-id` attributes
+- Delete updates both UI and localStorage
+
 ## Features
 
 - Add expenses with description, amount, and category
+- Delete expenses with one click
 - Form validation with error messages
 - Local Storage persistence
 - Responsive design
@@ -53,5 +61,6 @@ Day_81-84/
 - `localStorage` API
 - Form handling & validation
 - DOM manipulation
+- Event delegation with `data-*` attributes
 
 ---
