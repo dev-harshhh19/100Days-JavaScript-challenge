@@ -1,6 +1,6 @@
 // Import modules
 import { validateExpenseInput } from './Js/validation.js';
-import { createExpense, addExpense, getExpenses } from './Js/expenseManager.js';
+import { createExpense, addExpense, getExpenses, deleteExpense } from './Js/expenseManager.js';
 import { showError, clearError, resetForm, renderExpenses } from './Js/ui.js';
 
 // DOM Elements
@@ -13,8 +13,13 @@ const errorMessage = document.getElementById('errorMessage');
 
 function init() {
     expenseForm.addEventListener('submit', handleAddExpense);
-    renderExpenses(expensesList, getExpenses());
+    renderExpensesList();
 }
+
+function renderExpensesList() {
+    renderExpenses(expensesList, getExpenses(), handleDeleteExpense);
+}
+
 function handleAddExpense(e) {
     e.preventDefault();
 
@@ -22,7 +27,6 @@ function handleAddExpense(e) {
     const amount = amountInput.value.trim();
     const category = categoryInput.value;
 
-    // Validate input
     const validation = validateExpenseInput(description, amount, category);
 
     if (!validation.isValid) {
@@ -30,14 +34,17 @@ function handleAddExpense(e) {
         return;
     }
 
-    // Create and add expense
     const expense = createExpense(description, amount, category);
     addExpense(expense);
 
-    // Update UI
-    renderExpenses(expensesList, getExpenses());
+    renderExpensesList();
     resetForm(expenseForm, descriptionInput);
     clearError(errorMessage);
+}
+
+function handleDeleteExpense(id) {
+    deleteExpense(id);
+    renderExpensesList();
 }
 
 init();
