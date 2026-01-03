@@ -20,12 +20,19 @@ A complete expense tracking application built with vanilla JavaScript using ES6 
 - Added delete button to each expense item
 - Implemented `handleDeleteExpense()` in script.js
 - Used event delegation with `data-id` attributes
-- Delete updates both UI and localStorage
+
+## Day 84: Summary & Statistics
+
+- Added summary section showing total expenses
+- Category breakdown with sorted amounts
+- `getTotalAmount()`, `getCategoryTotals()`, `getExpenseCount()` in expenseManager.js
+- `renderSummary()` in ui.js for display
 
 ## Features
 
 - Add expenses with description, amount, and category
 - Delete expenses with one click
+- Summary with total and category breakdown
 - Form validation with error messages
 - Local Storage persistence
 - Responsive design
@@ -41,6 +48,7 @@ Day_81-84/
 │   ├── base.css
 │   ├── header.css
 │   ├── form.css
+│   ├── summary.css
 │   ├── expenses.css
 │   └── responsive.css
 └── Js/
@@ -59,8 +67,9 @@ Day_81-84/
 - ES6 Modules (`import` / `export`)
 - CSS `@import`
 - `localStorage` API
+- `reduce()` for totals
+- `Object.entries()` for category iteration
 - Form handling & validation
 - DOM manipulation
-- Event delegation with `data-*` attributes
 
 ---
