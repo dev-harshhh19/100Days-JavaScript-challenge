@@ -1,0 +1,75 @@
+/* Summary Styles */
+
+.summary-container {
+  padding: 20px;
+  background: #f0f9ff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.summary-container h2 {
+  color: #1f2933;
+  margin-bottom: 15px;
+  font-size: 1.3em;
+}
+
+.summary-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2563eb;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+}
+
+.total-label {
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.total-amount {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.category-breakdown {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.category-breakdown h4 {
+  color: #374151;
+  margin-bottom: 12px;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+.category-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.category-item:last-child {
+  border-bottom: none;
+}
+
+.category-name {
+  color: #6b7280;
+  font-size: 0.9em;
+}
+
+.category-amount {
+  color: #1f2933;
+  font-weight: 600;
+  font-size: 0.9em;
+}
