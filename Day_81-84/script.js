@@ -1,7 +1,7 @@
 // Import modules
 import { validateExpenseInput } from './Js/validation.js';
-import { createExpense, addExpense, getExpenses, deleteExpense } from './Js/expenseManager.js';
-import { showError, clearError, resetForm, renderExpenses } from './Js/ui.js';
+import { createExpense, addExpense, getExpenses, deleteExpense, getTotalAmount, getCategoryTotals, getExpenseCount } from './Js/expenseManager.js';
+import { showError, clearError, resetForm, renderExpenses, renderSummary } from './Js/ui.js';
 
 // DOM Elements
 const expenseForm = document.getElementById('expenseForm');
@@ -10,14 +10,16 @@ const amountInput = document.getElementById('amount');
 const categoryInput = document.getElementById('category');
 const expensesList = document.getElementById('expensesList');
 const errorMessage = document.getElementById('errorMessage');
+const summaryContainer = document.getElementById('summaryContainer');
 
 function init() {
     expenseForm.addEventListener('submit', handleAddExpense);
-    renderExpensesList();
+    updateUI();
 }
 
-function renderExpensesList() {
+function updateUI() {
     renderExpenses(expensesList, getExpenses(), handleDeleteExpense);
+    renderSummary(summaryContainer, getTotalAmount(), getExpenseCount(), getCategoryTotals());
 }
 
 function handleAddExpense(e) {
@@ -37,14 +39,14 @@ function handleAddExpense(e) {
     const expense = createExpense(description, amount, category);
     addExpense(expense);
 
-    renderExpensesList();
+    updateUI();
     resetForm(expenseForm, descriptionInput);
     clearError(errorMessage);
 }
 
 function handleDeleteExpense(id) {
     deleteExpense(id);
-    renderExpensesList();
+    updateUI();
 }
 
 init();
