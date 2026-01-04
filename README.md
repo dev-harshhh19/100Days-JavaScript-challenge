@@ -1,6 +1,6 @@
 # 100 Days JavaScript Challenge
 
-![Progress](https://img.shields.io/badge/Progress-84%2F100_Days-brightgreen?style=for-the-badge)
+![Progress](https://img.shields.io/badge/Progress-88%2F100_Days-brightgreen?style=for-the-badge)
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![Status](https://img.shields.io/badge/Status-In_Progress-blue?style=for-the-badge)
 
@@ -91,10 +91,7 @@
 | 79 | Async Debugging & Performance | Debugging async code | [View](Day_79/README.md) |
 | 80 | GitHub User Finder | GitHub API integration project | [View](Day_80/README.md) |
 | 81-84 | Expense Tracker (Project) | A complete expense tracking application built with vanilla JavaScript using **ES6 Modules**. | [View](Day_81-84/README.md) |
-| 85 | Coming Soon | - | - |
-| 86 | Coming Soon | - | - |
-| 87 | Coming Soon | - | - |
-| 88 | Coming Soon | - | - |
+| 85-88 | Quiz Game (Project) | Logic-heavy quiz with timer, score tracking, high score, and state management | [View](Day_85-88/README.md) |
 | 89 | Coming Soon | - | - |
 | 90 | Coming Soon | - | - |
 | 91 | Coming Soon | - | - |
