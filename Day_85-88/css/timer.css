@@ -1,0 +1,39 @@
+/* Timer Styles */
+
+.timer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 15px;
+  background: var(--accent);
+  border-radius: 20px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.timer-icon {
+  font-size: 1em;
+}
+
+.timer.warning {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.timer.danger {
+  background: #fee2e2;
+  color: #dc2626;
+  animation: pulse 0.5s ease infinite;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+}

@@ -1,0 +1,32 @@
+/* Base Styles */
+
+:root {
+  --text: #000d15;
+  --background: #f2f6f9;
+  --primary: #005792;
+  --secondary: #53cde2;
+  --accent: #d1f4fa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--background);
+  min-height: 100vh;
+  padding: 20px;
+  color: var(--text);
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0, 13, 21, 0.08);
+  overflow: hidden;
+}
