@@ -1,21 +1,10 @@
-// Main Script - Day 88: Complex State Management
+// Main Script - Day 86: Score Tracking
 
 import { getQuestion, getTotalQuestions } from './Js/questions.js';
 import { startTimer, stopTimer } from './Js/timer.js';
-import { getHighScore, checkAndUpdateHighScore } from './Js/score.js';
-import {
-  getState,
-  updateState,
-  resetState,
-  incrementQuestion,
-  incrementScore,
-  setSelectedAnswer,
-  setQuizActive
-} from './Js/state.js';
 import {
   updateTimerDisplay,
   updateScoreDisplay,
-  updateHighScoreDisplay,
   updateProgress,
   displayQuestion,
   showScreen,
@@ -32,35 +21,39 @@ const nextBtn = document.getElementById('nextBtn');
 const restartBtn = document.getElementById('restartBtn');
 const optionsContainer = document.getElementById('optionsContainer');
 
+// Game State
+let currentQuestion = 0;
+let score = 0;
+let correctCount = 0;
+let selectedAnswer = null;
+
 function init() {
   startBtn.addEventListener('click', startQuiz);
   nextBtn.addEventListener('click', nextQuestion);
   restartBtn.addEventListener('click', restartQuiz);
   optionsContainer.addEventListener('click', handleOptionClick);
-
-  updateHighScoreDisplay(getHighScore());
 }
 
 function startQuiz() {
-  resetState();
-  setQuizActive(true);
-  updateScoreDisplay(0);
+  currentQuestion = 0;
+  score = 0;
+  correctCount = 0;
+  updateScoreDisplay(score);
   showScreen('quiz');
   loadQuestion();
 }
 
 function loadQuestion() {
-  const state = getState();
-  setSelectedAnswer(null);
+  selectedAnswer = null;
   disableNextButton();
 
-  const question = getQuestion(state.currentQuestion);
+  const question = getQuestion(currentQuestion);
   if (!question) {
     endQuiz();
     return;
   }
 
-  updateProgress(state.currentQuestion, getTotalQuestions());
+  updateProgress(currentQuestion, getTotalQuestions());
   displayQuestion(question);
 
   startTimer(
@@ -73,36 +66,33 @@ function handleOptionClick(e) {
   if (!e.target.classList.contains('option-btn')) return;
   if (e.target.disabled) return;
 
-  const state = getState();
   const selectedIndex = parseInt(e.target.dataset.index);
-  const question = getQuestion(state.currentQuestion);
+  const question = getQuestion(currentQuestion);
 
-  setSelectedAnswer(selectedIndex);
+  selectedAnswer = selectedIndex;
   stopTimer();
   disableOptions();
   markAnswer(selectedIndex, question.correct);
 
   if (selectedIndex === question.correct) {
-    incrementScore();
-    updateScoreDisplay(getState().score);
+    score++;
+    correctCount++;
+    updateScoreDisplay(score);
   }
 
   enableNextButton();
 }
 
 function handleTimeUp() {
-  const state = getState();
-  const question = getQuestion(state.currentQuestion);
+  const question = getQuestion(currentQuestion);
   disableOptions();
   markAnswer(-1, question.correct);
   enableNextButton();
 }
 
 function nextQuestion() {
-  incrementQuestion();
-  const state = getState();
-
-  if (state.currentQuestion >= getTotalQuestions()) {
+  currentQuestion++;
+  if (currentQuestion >= getTotalQuestions()) {
     endQuiz();
   } else {
     loadQuestion();
@@ -111,17 +101,10 @@ function nextQuestion() {
 
 function endQuiz() {
   stopTimer();
-  setQuizActive(false);
-
-  const state = getState();
-  const total = getTotalQuestions();
-  const incorrectCount = total - state.correctCount;
-  const isNewHighScore = checkAndUpdateHighScore(state.score);
-  const highScore = getHighScore();
-
-  updateHighScoreDisplay(highScore);
   showScreen('result');
-  showResult(state.score, total, state.correctCount, incorrectCount, isNewHighScore, highScore);
+  const total = getTotalQuestions();
+  const incorrectCount = total - correctCount;
+  showResult(score, total, correctCount, incorrectCount);
 }
 
 function restartQuiz() {

@@ -19,11 +19,6 @@ export function updateScoreDisplay(score) {
   scoreDisplay.textContent = `Score: ${score}`;
 }
 
-export function updateHighScoreDisplay(highScore) {
-  const startHighScore = document.getElementById('startHighScore');
-  startHighScore.textContent = `High Score: ${highScore}`;
-}
-
 export function updateProgress(current, total) {
   const progressFill = document.getElementById('progressFill');
   const questionNumber = document.getElementById('questionNumber');
@@ -58,20 +53,11 @@ export function showScreen(screenId) {
   }
 }
 
-export function showResult(score, total, correctCount, incorrectCount, isNewHighScore, highScore) {
+export function showResult(score, total, correctCount, incorrectCount) {
   const finalScore = document.getElementById('finalScore');
-  const highScoreResult = document.getElementById('highScoreResult');
   const resultContent = document.querySelector('.result-content');
 
   finalScore.textContent = `Your Score: ${score}/${total}`;
-
-  if (isNewHighScore) {
-    highScoreResult.textContent = `New High Score!`;
-    highScoreResult.classList.add('new-high-score');
-  } else {
-    highScoreResult.textContent = `High Score: ${highScore}`;
-    highScoreResult.classList.remove('new-high-score');
-  }
 
   const existingBreakdown = resultContent.querySelector('.score-breakdown');
   if (existingBreakdown) existingBreakdown.remove();
