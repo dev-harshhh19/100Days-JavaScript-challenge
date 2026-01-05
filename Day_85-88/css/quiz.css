@@ -143,17 +143,7 @@
 
 .start-screen p {
   color: #6b7280;
-  margin-bottom: 15px;
-}
-
-.high-score-display {
-  padding: 10px 20px;
-  background: var(--accent);
-  color: var(--primary);
-  border-radius: 8px;
-  font-weight: 600;
   margin-bottom: 25px;
-  display: inline-block;
 }
 
 .btn-start {
@@ -192,18 +182,6 @@
   font-size: 1.5em;
   font-weight: 700;
   color: var(--primary);
-}
-
-.high-score-result {
-  margin-top: 10px;
-  color: #6b7280;
-  font-size: 1em;
-}
-
-.high-score-result.new-high-score {
-  color: #22c55e;
-  font-weight: 700;
-  font-size: 1.2em;
 }
 
 .score-breakdown {
