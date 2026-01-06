@@ -1,10 +1,12 @@
-// Main Script - Day 86: Score Tracking
+// Main Script - Day 87: High Score & JSON Question Bank
 
-import { getQuestion, getTotalQuestions } from './Js/questions.js';
+import { loadQuestions, getQuestion, getTotalQuestions } from './Js/questions.js';
 import { startTimer, stopTimer } from './Js/timer.js';
+import { getHighScore, checkNewHighScore } from './Js/score.js';
 import {
   updateTimerDisplay,
   updateScoreDisplay,
+  updateHighScoreDisplay,
   updateProgress,
   displayQuestion,
   showScreen,
@@ -27,11 +29,27 @@ let score = 0;
 let correctCount = 0;
 let selectedAnswer = null;
 
-function init() {
-  startBtn.addEventListener('click', startQuiz);
-  nextBtn.addEventListener('click', nextQuestion);
-  restartBtn.addEventListener('click', restartQuiz);
-  optionsContainer.addEventListener('click', handleOptionClick);
+async function init() {
+  // Disable start button until questions are loaded
+  startBtn.disabled = true;
+  startBtn.textContent = "Loading...";
+
+  const loaded = await loadQuestions();
+
+  if (loaded) {
+    startBtn.disabled = false;
+    startBtn.textContent = "Start Quiz";
+
+    startBtn.addEventListener('click', startQuiz);
+    nextBtn.addEventListener('click', nextQuestion);
+    restartBtn.addEventListener('click', restartQuiz);
+    optionsContainer.addEventListener('click', handleOptionClick);
+
+    // Initial High Score Display
+    updateHighScoreDisplay(getHighScore());
+  } else {
+    startBtn.textContent = "Error Loading Questions";
+  }
 }
 
 function startQuiz() {
@@ -101,10 +119,17 @@ function nextQuestion() {
 
 function endQuiz() {
   stopTimer();
-  showScreen('result');
+
+  const isNewHighScore = checkNewHighScore(score);
   const total = getTotalQuestions();
   const incorrectCount = total - correctCount;
-  showResult(score, total, correctCount, incorrectCount);
+  const currentHighScore = getHighScore();
+
+  // Update start screen high score too
+  updateHighScoreDisplay(currentHighScore);
+
+  showScreen('result');
+  showResult(score, total, correctCount, incorrectCount, isNewHighScore, currentHighScore);
 }
 
 function restartQuiz() {

@@ -7,14 +7,14 @@ export function getHighScore() {
   return stored ? parseInt(stored) : 0;
 }
 
-export function setHighScore(score) {
+export function saveHighScore(score) {
   localStorage.setItem(HIGH_SCORE_KEY, score.toString());
 }
 
-export function checkAndUpdateHighScore(currentScore) {
+export function checkNewHighScore(currentScore) {
   const highScore = getHighScore();
   if (currentScore > highScore) {
-    setHighScore(currentScore);
+    saveHighScore(currentScore);
     return true;
   }
   return false;

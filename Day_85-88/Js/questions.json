@@ -1,0 +1,212 @@
+[
+  {
+    "question": "What does 'DOM' stand for in JavaScript?",
+    "options": [
+      "Document Object Model",
+      "Data Object Management",
+      "Digital Ordinance Model",
+      "Document Orientation Mode"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Which method is used to add an element at the end of an array?",
+    "options": [
+      "unshift()",
+      "push()",
+      "pop()",
+      "shift()"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "What is the output of typeof null?",
+    "options": [
+      "null",
+      "undefined",
+      "object",
+      "boolean"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Which ES6 feature is used for template strings?",
+    "options": [
+      "Single quotes",
+      "Double quotes",
+      "Backticks",
+      "Forward slashes"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "What does 'NaN' stand for?",
+    "options": [
+      "Not a Null",
+      "Not a Number",
+      "Null and None",
+      "Number and Null"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Which keyword is used to declare a block-scoped variable?",
+    "options": [
+      "var",
+      "let",
+      "global",
+      "this"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "What is the closure in JavaScript?",
+    "options": [
+      "A function inside another function",
+      "A method of an object",
+      "A variable declared with const",
+      "A global variable"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Which method removes the last element from an array?",
+    "options": [
+      "shift()",
+      "unshift()",
+      "pop()",
+      "push()"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "What is the correct way to write an arrow function?",
+    "options": [
+      "func() => {}",
+      "const func = () => {}",
+      "arrow func() => {}",
+      "function => () {}"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "How do you check if a value is NOT a number?",
+    "options": [
+      "isNaN()",
+      "isNumber()",
+      "isInteger()",
+      "typeof number"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Which of these is a JavaScript Framework?",
+    "options": [
+      "Laravel",
+      "Django",
+      "React",
+      "Flask"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "What does JSON stand for?",
+    "options": [
+      "JavaScript Object Notation",
+      "Java Standard Output Network",
+      "JavaScript Output Node",
+      "Java Source Open Network"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "How do you declare a constant variable?",
+    "options": [
+      "var",
+      "let",
+      "const",
+      "constant"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Which event occurs when a user clicks an HTML element?",
+    "options": [
+      "onchange",
+      "onmouseover",
+      "onclick",
+      "onmouseclick"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "How do you create a promise?",
+    "options": [
+      "new Promise()",
+      "Promise.create()",
+      "new Async()",
+      "await Promise()"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Which method converts a JSON string into an object?",
+    "options": [
+      "JSON.stringify()",
+      "JSON.parse()",
+      "JSON.toObject()",
+      "JSON.box()"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "What is the result of '2' + 2?",
+    "options": [
+      "4",
+      "'22'",
+      "NaN",
+      "Error"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Which operator is used for strict equality?",
+    "options": [
+      "==",
+      "===",
+      "=",
+      "!="
+    ],
+    "correct": 1
+  },
+  {
+    "question": "What is 'hoisting'?",
+    "options": [
+      "Moving declarations to top",
+      "Deleting variables",
+      "Calling functions",
+      "Creating classes"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Which keyword is used to stop a loop?",
+    "options": [
+      "stop",
+      "return",
+      "break",
+      "exit"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "What does the 'this' keyword refer to?",
+    "options": [
+      "Current function",
+      "Current object",
+      "Global object",
+      "Depends on invocation"
+    ],
+    "correct": 3
+  }
+]
