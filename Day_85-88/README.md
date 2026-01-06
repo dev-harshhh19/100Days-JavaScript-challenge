@@ -16,11 +16,21 @@ A quiz game application built with vanilla JavaScript using ES6 Modules.
 - Real-time score updates after each correct answer
 - Score breakdown on results screen (correct/incorrect counts)
 
+## Day 87: High Score & JSON Question Bank
+
+- Created `score.js` module with localStorage persistence
+- High score display on start screen
+- "New High Score!" celebration on results
+- **JSON Question Bank**: Replaced hardcoded questions with `questions.json` containing 20+ questions
+- Implemented asynchronous data fetching with `fetch()` API
+- Start button shows "Loading..." state while fetching data
+
 ## Features
 
-- 5 JavaScript knowledge questions
+- 20+ JavaScript knowledge questions loaded from JSON
 - 30-second timer per question with visual feedback
 - Real-time score tracking
+- High score persistence with localStorage
 - Visual answer feedback (correct/incorrect)
 
 ## Project Structure
@@ -37,21 +47,25 @@ Day_85-88/
 │   ├── timer.css
 │   └── responsive.css
 └── Js/
-    ├── questions.js
+    ├── questions.json  ← Question Bank
+    ├── questions.js    ← Fetches JSON data
     ├── timer.js
+    ├── score.js
     └── ui.js
 ```
 
 ## How to Run
 
-1. `npx serve`
+1. `npx serve` (Required for `fetch` to work correctly)
 2. Open `http://localhost:3000/Day_85-88/`
 
 ## Key Concepts
 
 - ES6 Modules (`import` / `export`)
-- `setInterval()` / `clearInterval()` for timer
+- Asynchronous JavaScript (`async` / `await` / `fetch`)
+- JSON Data Handling
+- `localStorage` for persistence
+- `setInterval()` for timer
 - Event delegation
-- DOM manipulation
 
 ---
