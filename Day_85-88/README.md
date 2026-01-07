@@ -5,8 +5,6 @@ A quiz game application built with vanilla JavaScript using ES6 Modules.
 ## Day 85: Timer Setup
 
 - Set up modular project structure
-- Created `script.js` as main entry point importing other modules
-- Created `style.css` as main stylesheet importing CSS modules
 - Implemented 30-second countdown timer per question
 - Timer displays warning (yellow) at 10s, danger (red) at 5s
 
@@ -14,58 +12,55 @@ A quiz game application built with vanilla JavaScript using ES6 Modules.
 
 - Added score display in quiz header
 - Real-time score updates after each correct answer
-- Score breakdown on results screen (correct/incorrect counts)
+- Score breakdown on results screen
 
 ## Day 87: High Score & JSON Question Bank
 
-- Created `score.js` module with localStorage persistence
-- High score display on start screen
+- High score persistence with localStorage
 - "New High Score!" celebration on results
-- **JSON Question Bank**: Replaced hardcoded questions with `questions.json` containing 20+ questions
-- Implemented asynchronous data fetching with `fetch()` API
-- Start button shows "Loading..." state while fetching data
+- Replaced hardcoded questions with `questions.json` (20+ questions)
+- Async data fetching with `fetch()` API
+
+## Day 88: Complex State Management
+
+- Created `state.js` with centralized state store
+- State includes: currentQuestion, score, correctCount, selectedAnswer, isQuizActive, isLoading
+- Subscriber pattern for reactive state changes
+- Clean separation between state logic and UI
 
 ## Features
 
-- 20+ JavaScript knowledge questions loaded from JSON
-- 30-second timer per question with visual feedback
+- 20+ JavaScript knowledge questions from JSON
+- 30-second timer with visual feedback
 - Real-time score tracking
-- High score persistence with localStorage
-- Visual answer feedback (correct/incorrect)
+- High score persistence
+- Centralized state management
 
 ## Project Structure
 
 ```
 Day_85-88/
 ├── index.html
-├── style.css           ← imports CSS modules
-├── script.js           ← imports JS modules
+├── style.css
+├── script.js
 ├── css/
-│   ├── base.css
-│   ├── header.css
-│   ├── quiz.css
-│   ├── timer.css
-│   └── responsive.css
+│   ├── base.css, header.css, quiz.css, timer.css, responsive.css
 └── Js/
-    ├── questions.json  ← Question Bank
-    ├── questions.js    ← Fetches JSON data
-    ├── timer.js
-    ├── score.js
-    └── ui.js
+    ├── questions.json, questions.js, timer.js, score.js, state.js, ui.js
 ```
 
 ## How to Run
 
-1. `npx serve` (Required for `fetch` to work correctly)
-2. Open `http://localhost:3000/Day_85-88/`
+1. `npx serve`
+2. Open `http://localhost:3000/`
 
 ## Key Concepts
 
-- ES6 Modules (`import` / `export`)
-- Asynchronous JavaScript (`async` / `await` / `fetch`)
+- ES6 Modules
+- Async/Await & Fetch API
 - JSON Data Handling
-- `localStorage` for persistence
-- `setInterval()` for timer
-- Event delegation
+- localStorage
+- Centralized State Management
+- Subscriber/Listener Pattern
 
 ---
