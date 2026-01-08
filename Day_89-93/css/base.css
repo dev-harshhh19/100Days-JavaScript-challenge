@@ -1,0 +1,67 @@
+/* Base Styles */
+
+:root {
+  --text: #000d15;
+  --background: #f2f6f9;
+  --primary: #005792;
+  --secondary: #53cde2;
+  --accent: #d1f4fa;
+  --container-bg: #ffffff;
+  --shadow: rgba(0, 13, 21, 0.08);
+  --card-bg: #ffffff;
+}
+
+[data-theme="dark"] {
+  --text: #f2f6f9;
+  --background: #000d15;
+  --primary: #53cde2;
+  --secondary: #005792;
+  --accent: #0a2a3d;
+  --container-bg: #071a25;
+  --shadow: rgba(0, 0, 0, 0.3);
+  --card-bg: #0a2a3d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--background);
+  min-height: 100vh;
+  padding: 20px;
+  color: var(--text);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--container-bg);
+  border-radius: 14px;
+  box-shadow: 0 8px 25px var(--shadow);
+  overflow: hidden;
+  transition: background 0.3s ease;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
