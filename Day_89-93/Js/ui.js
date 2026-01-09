@@ -34,7 +34,7 @@ export function renderRecipes(recipes) {
   const grid = document.getElementById('recipesGrid');
 
   if (recipes.length === 0) {
-    grid.innerHTML = '<div class="no-results"><p>No recipes found. Try a different ingredient.</p></div>';
+    grid.innerHTML = '<div class="no-results"><p>No recipes found. Try a different search.</p></div>';
     return;
   }
 
@@ -46,6 +46,16 @@ export function renderRecipes(recipes) {
             </div>
         </div>
     `).join('');
+}
+
+export function populateCategories(categories, selectElement) {
+  selectElement.innerHTML = '<option value="">All Categories</option>';
+  categories.forEach(cat => {
+    const option = document.createElement('option');
+    option.value = cat.strCategory;
+    option.textContent = cat.strCategory;
+    selectElement.appendChild(option);
+  });
 }
 
 export function disableSearchButton(btn) {
