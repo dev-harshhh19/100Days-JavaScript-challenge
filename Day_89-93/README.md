@@ -5,31 +5,32 @@ A recipe finder application built with vanilla JavaScript using TheMealDB API.
 ## Day 89: Search by Ingredient
 
 - Set up modular project structure
-- Implemented search input with Enter key support
 - Fetch recipes from TheMealDB API by ingredient
 - Display recipe cards with image and title
 - Loading, error, and empty state handling
-- Theme toggle (light/dark mode)
+
+## Day 90: Filter by Category
+
+- Added category dropdown populated from API
+- Filter recipes by selecting a category
+- Can browse categories without searching first
+- State management for current search/filter
 
 ## Features
 
 - Search recipes by ingredient
+- Filter by meal category
 - Responsive recipe card grid
-- Loading spinner during API calls
-- Error handling with user feedback
-- Theme toggle with localStorage persistence
+- Theme toggle (light/dark mode)
+- Error handling
 
 ## Project Structure
 
 ```
 Day_89-93/
-├── index.html
-├── style.css
-├── script.js
-├── css/
-│   ├── base.css, header.css, search.css, recipes.css, responsive.css
-└── Js/
-    ├── api.js, ui.js, theme.js
+├── index.html, style.css, script.js
+├── css/ (base, header, search, recipes, responsive)
+└── Js/ (api.js, ui.js, theme.js)
 ```
 
 ## How to Run
@@ -39,14 +40,6 @@ Day_89-93/
 
 ## API Used
 
-- [TheMealDB](https://www.themealdb.com/api.php) - Free meal database API
-
-## Key Concepts
-
-- ES6 Modules
-- Fetch API
-- Async/Await
-- Error Handling
-- DOM Manipulation
+- [TheMealDB](https://www.themealdb.com/api.php)
 
 ---
