@@ -56,3 +56,35 @@
   font-size: 0.85em;
   color: #6b7280;
 }
+
+/* Filter Styles */
+.filter-container {
+  padding: 15px 20px;
+  border-bottom: 1px solid var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.filter-container label {
+  font-weight: 500;
+  color: var(--text);
+  font-size: 0.95em;
+}
+
+.filter-container select {
+  flex: 1;
+  max-width: 250px;
+  padding: 10px 14px;
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  font-size: 0.95em;
+  background: var(--container-bg);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.filter-container select:focus {
+  outline: none;
+  border-color: var(--primary);
+}
