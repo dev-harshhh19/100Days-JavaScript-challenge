@@ -3,43 +3,36 @@
 A recipe finder application built with vanilla JavaScript using TheMealDB API.
 
 ## Day 89: Search by Ingredient
-
-- Set up modular project structure
-- Fetch recipes from TheMealDB API by ingredient
-- Display recipe cards with image and title
-- Loading, error, and empty state handling
+- Fetch recipes by ingredient from API
+- Recipe cards with image and title
 
 ## Day 90: Filter by Category
+- Category dropdown from API
+- Filter recipes by category
 
-- Added category dropdown populated from API
-- Filter recipes by selecting a category
-- Can browse categories without searching first
-- State management for current search/filter
+## Day 91: Save Favorites
+- Heart button on each recipe card
+- Save/remove favorites with localStorage
+- Favorites section with counter
+- Persistent across sessions
 
 ## Features
-
-- Search recipes by ingredient
-- Filter by meal category
-- Responsive recipe card grid
-- Theme toggle (light/dark mode)
-- Error handling
+- Search by ingredient
+- Filter by category
+- Save favorites locally
+- Responsive grid layout
+- Theme toggle
 
 ## Project Structure
-
 ```
 Day_89-93/
 ├── index.html, style.css, script.js
 ├── css/ (base, header, search, recipes, responsive)
-└── Js/ (api.js, ui.js, theme.js)
+└── Js/ (api.js, ui.js, theme.js, favorites.js)
 ```
 
 ## How to Run
-
-1. `npx serve` in `Day_89-93` folder
+1. `npx serve` in `Day_89-93`
 2. Open `http://localhost:3000/`
-
-## API Used
-
-- [TheMealDB](https://www.themealdb.com/api.php)
 
 ---
