@@ -97,3 +97,191 @@
   padding: 50px 20px;
   color: #6b7280;
 }
+
+/* Favorites Button */
+.btn-favorites {
+  margin-left: auto;
+  padding: 10px 16px;
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  border-radius: 8px;
+  font-size: 0.9em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-favorites:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* Favorites Section */
+.favorites-section {
+  padding: 20px;
+  border-bottom: 2px solid var(--accent);
+  background: var(--accent);
+}
+
+.favorites-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.favorites-header h2 {
+  font-size: 1.3em;
+  color: var(--text);
+}
+
+.btn-close {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  background: var(--container-bg);
+  color: var(--text);
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.favorites-empty {
+  text-align: center;
+  padding: 30px;
+  color: #6b7280;
+}
+
+/* Favorite Heart Button */
+.btn-favorite {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.btn-favorite:hover {
+  transform: scale(1.1);
+}
+
+.btn-favorite.active {
+  background: #fee2e2;
+}
+
+.recipe-card {
+  position: relative;
+  cursor: pointer;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-content {
+  background: var(--container-bg);
+  border-radius: 14px;
+  max-width: 700px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--text);
+  font-size: 1.1em;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.modal-body {
+  padding: 0;
+}
+
+.recipe-detail-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 14px 14px 0 0;
+}
+
+.recipe-detail-content {
+  padding: 25px;
+}
+
+.recipe-detail-content h2 {
+  font-size: 1.5em;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.recipe-meta {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.recipe-meta span {
+  padding: 5px 12px;
+  background: var(--accent);
+  color: var(--primary);
+  border-radius: 20px;
+  font-size: 0.85em;
+  font-weight: 500;
+}
+
+.recipe-detail-content h3 {
+  font-size: 1.1em;
+  color: var(--text);
+  margin: 20px 0 10px;
+}
+
+.recipe-ingredients {
+  list-style: none;
+  padding: 0;
+}
+
+.recipe-ingredients li {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--accent);
+  color: var(--text);
+}
+
+.recipe-instructions {
+  line-height: 1.7;
+  color: var(--text);
+  white-space: pre-line;
+}
+
+.modal-loading {
+  padding: 50px;
+  text-align: center;
+  color: #6b7280;
+}
