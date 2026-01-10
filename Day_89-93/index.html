@@ -29,6 +29,15 @@
       <select id="categoryFilter">
         <option value="">All Categories</option>
       </select>
+      <button class="btn-favorites" id="showFavoritesBtn">❤️ Favorites (<span id="favoritesCount">0</span>)</button>
+    </div>
+
+    <div class="favorites-section" id="favoritesSection" style="display: none;">
+      <div class="favorites-header">
+        <h2>My Favorites</h2>
+        <button class="btn-close" id="closeFavoritesBtn">✕</button>
+      </div>
+      <div id="favoritesGrid" class="recipes-grid"></div>
     </div>
 
     <div class="results-container">
@@ -46,6 +55,16 @@
       </div>
 
       <div id="recipesGrid" class="recipes-grid"></div>
+    </div>
+  </div>
+
+  <!-- Recipe Detail Modal -->
+  <div class="modal-overlay" id="recipeModal" style="display: none;">
+    <div class="modal-content">
+      <button class="modal-close" id="closeModalBtn">✕</button>
+      <div class="modal-body" id="modalBody">
+        <!-- Recipe details load here -->
+      </div>
     </div>
   </div>
 
