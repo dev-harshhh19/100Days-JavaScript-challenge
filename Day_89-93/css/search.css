@@ -51,40 +51,58 @@
   cursor: not-allowed;
 }
 
-.search-hint {
-  margin-top: 12px;
-  font-size: 0.85em;
-  color: #6b7280;
-}
-
-/* Filter Styles */
-.filter-container {
-  padding: 15px 20px;
-  border-bottom: 1px solid var(--accent);
+/* Tab Navigation */
+.tabs-container {
   display: flex;
-  align-items: center;
-  gap: 12px;
+  border-bottom: 2px solid var(--accent);
 }
 
-.filter-container label {
-  font-weight: 500;
-  color: var(--text);
-  font-size: 0.95em;
-}
-
-.filter-container select {
+.tab-btn {
   flex: 1;
-  max-width: 250px;
-  padding: 10px 14px;
-  border: 2px solid var(--accent);
+  padding: 15px 20px;
+  background: transparent;
+  border: none;
+  font-size: 1em;
+  font-weight: 600;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+}
+
+.tab-btn:hover {
+  color: var(--primary);
+}
+
+.tab-btn.active {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
+/* Tab Content */
+.tab-content {
+  display: none;
+  padding: 20px;
+  min-height: 300px;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Browse Button */
+.btn-browse {
+  margin-top: 15px;
+  padding: 12px 24px;
+  background: var(--primary);
+  color: white;
+  border: none;
   border-radius: 8px;
-  font-size: 0.95em;
-  background: var(--container-bg);
-  color: var(--text);
+  font-size: 1em;
   cursor: pointer;
 }
 
-.filter-container select:focus {
-  outline: none;
-  border-color: var(--primary);
+.btn-browse:hover {
+  opacity: 0.9;
 }
