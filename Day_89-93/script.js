@@ -1,8 +1,8 @@
-// Main Script - Recipe Finder with Modal
+// Main Script - Day 92: Combine API and Storage with Tabs
 
-import { searchByIngredient, getCategories, filterByCategory, getMealDetails } from './Js/api.js';
+import { searchByName, getRandomMeals, getMealDetails } from './Js/api.js';
 import { initTheme, toggleTheme, getTheme } from './Js/theme.js';
-import { getFavorites, toggleFavorite } from './Js/favorites.js';
+import { getFavorites, toggleFavorite, isFavorite } from './Js/favorites.js';
 import {
   showLoading,
   showError,
@@ -10,9 +10,6 @@ import {
   renderRecipes,
   renderFavorites,
   updateFavoritesCount,
-  showFavoritesSection,
-  hideFavoritesSection,
-  populateCategories,
   disableSearchButton,
   enableSearchButton,
   showModal,
@@ -25,26 +22,48 @@ import {
 const searchInput = document.getElementById('searchInput');
 const searchBtn = document.getElementById('searchBtn');
 const themeToggle = document.getElementById('themeToggle');
-const categoryFilter = document.getElementById('categoryFilter');
-const showFavoritesBtn = document.getElementById('showFavoritesBtn');
-const closeFavoritesBtn = document.getElementById('closeFavoritesBtn');
+const searchTab = document.getElementById('searchTab');
+const favoritesTab = document.getElementById('favoritesTab');
+const searchContent = document.getElementById('searchContent');
+const favoritesContent = document.getElementById('favoritesContent');
 const recipesGrid = document.getElementById('recipesGrid');
 const favoritesGrid = document.getElementById('favoritesGrid');
+const favoritesEmpty = document.getElementById('favoritesEmpty');
 const recipeModal = document.getElementById('recipeModal');
 const closeModalBtn = document.getElementById('closeModalBtn');
+const browseRandomBtn = document.getElementById('browseRandomBtn');
 
 // State
-let currentRecipes = [];
-let currentIngredient = '';
+let currentTab = 'search';
 
 function updateThemeIcon() {
   themeToggle.textContent = getTheme() === 'light' ? '🌙' : '☀️';
 }
 
+function switchTab(tab) {
+  currentTab = tab;
+
+  searchTab.classList.toggle('active', tab === 'search');
+  favoritesTab.classList.toggle('active', tab === 'favorites');
+  searchContent.classList.toggle('active', tab === 'search');
+  favoritesContent.classList.toggle('active', tab === 'favorites');
+
+  if (tab === 'favorites') {
+    refreshFavoritesUI();
+  }
+}
+
 function refreshFavoritesUI() {
   const favorites = getFavorites();
   updateFavoritesCount(favorites.length);
-  renderFavorites(favorites);
+
+  if (favorites.length === 0) {
+    favoritesGrid.innerHTML = '';
+    favoritesEmpty.style.display = 'block';
+  } else {
+    favoritesEmpty.style.display = 'none';
+    renderFavorites(favorites);
+  }
 }
 
 function handleFavoriteClick(e) {
@@ -61,13 +80,17 @@ function handleFavoriteClick(e) {
   const { added } = toggleFavorite(recipe);
   btn.classList.toggle('active', added);
   btn.textContent = added ? '❤️' : '🤍';
-  refreshFavoritesUI();
+  updateFavoritesCount(getFavorites().length);
+
+  if (currentTab === 'favorites') {
+    refreshFavoritesUI();
+  }
 }
 
 async function handleRecipeClick(e) {
   const card = e.target.closest('.recipe-card');
   if (!card) return;
-  if (e.target.closest('.btn-favorite')) return; // Ignore favorite button clicks
+  if (e.target.closest('.btn-favorite')) return;
 
   const mealId = card.dataset.id;
   showModal();
@@ -86,21 +109,23 @@ async function handleRecipeClick(e) {
 }
 
 async function handleSearch() {
-  const ingredient = searchInput.value.trim();
+  const query = searchInput.value.trim();
 
-  if (!ingredient) {
-    showError('Please enter an ingredient to search.');
+  if (!query) {
+    await loadRandomRecipes();
     return;
   }
 
-  currentIngredient = ingredient;
   disableSearchButton(searchBtn);
   showLoading();
-  hideFavoritesSection();
 
   try {
-    currentRecipes = await searchByIngredient(ingredient);
-    renderRecipes(currentRecipes);
+    const recipes = await searchByName(query);
+    if (recipes.length === 0) {
+      showError('No recipes found. Try a different search.');
+    } else {
+      renderRecipes(recipes);
+    }
   } catch (error) {
     showError('Failed to fetch recipes. Please try again.');
   } finally {
@@ -108,72 +133,45 @@ async function handleSearch() {
   }
 }
 
-async function handleCategoryChange() {
-  const selectedCategory = categoryFilter.value;
-  hideFavoritesSection();
-
-  if (!selectedCategory) {
-    if (currentRecipes.length > 0) {
-      renderRecipes(currentRecipes);
-    } else if (currentIngredient) {
-      await handleSearch();
-    }
-    return;
-  }
-
+async function loadRandomRecipes() {
+  disableSearchButton(searchBtn);
   showLoading();
-  try {
-    const categoryRecipes = await filterByCategory(selectedCategory);
-    renderRecipes(categoryRecipes);
-  } catch (error) {
-    showError('Failed to filter recipes. Please try again.');
-  }
-}
 
-async function loadCategories() {
   try {
-    const categories = await getCategories();
-    populateCategories(categories, categoryFilter);
+    const recipes = await getRandomMeals();
+    renderRecipes(recipes);
   } catch (error) {
-    console.error('Failed to load categories:', error);
+    showError('Failed to fetch recipes. Please try again.');
+  } finally {
+    enableSearchButton(searchBtn);
   }
 }
 
 async function init() {
   initTheme();
   updateThemeIcon();
-  await loadCategories();
   refreshFavoritesUI();
 
-  // Theme toggle
   themeToggle.addEventListener('click', () => {
     toggleTheme();
     updateThemeIcon();
   });
 
-  // Search
+  searchTab.addEventListener('click', () => switchTab('search'));
+  favoritesTab.addEventListener('click', () => switchTab('favorites'));
+
   searchBtn.addEventListener('click', handleSearch);
   searchInput.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') handleSearch();
   });
 
-  // Category filter
-  categoryFilter.addEventListener('change', handleCategoryChange);
+  browseRandomBtn.addEventListener('click', loadRandomRecipes);
 
-  // Favorites
-  showFavoritesBtn.addEventListener('click', () => {
-    refreshFavoritesUI();
-    showFavoritesSection();
-  });
-  closeFavoritesBtn.addEventListener('click', hideFavoritesSection);
-
-  // Recipe card clicks (event delegation)
   recipesGrid.addEventListener('click', handleFavoriteClick);
   recipesGrid.addEventListener('click', handleRecipeClick);
   favoritesGrid.addEventListener('click', handleFavoriteClick);
   favoritesGrid.addEventListener('click', handleRecipeClick);
 
-  // Modal close
   closeModalBtn.addEventListener('click', hideModal);
   recipeModal.addEventListener('click', (e) => {
     if (e.target === recipeModal) hideModal();
