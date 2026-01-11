@@ -16,23 +16,9 @@ export async function searchByIngredient(ingredient) {
   }
 }
 
-export async function getCategories() {
+export async function searchByName(query) {
   try {
-    const response = await fetch(`${BASE_URL}/categories.php`);
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    const data = await response.json();
-    return data.categories || [];
-  } catch (error) {
-    console.error('API Error:', error);
-    throw error;
-  }
-}
-
-export async function filterByCategory(category) {
-  try {
-    const response = await fetch(`${BASE_URL}/filter.php?c=${encodeURIComponent(category)}`);
+    const response = await fetch(`${BASE_URL}/search.php?s=${encodeURIComponent(query)}`);
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
@@ -52,6 +38,20 @@ export async function getMealDetails(mealId) {
     }
     const data = await response.json();
     return data.meals ? data.meals[0] : null;
+  } catch (error) {
+    console.error('API Error:', error);
+    throw error;
+  }
+}
+
+export async function getRandomMeals() {
+  try {
+    // Get multiple random meals
+    const promises = Array(8).fill().map(() =>
+      fetch(`${BASE_URL}/random.php`).then(r => r.json())
+    );
+    const results = await Promise.all(promises);
+    return results.map(r => r.meals?.[0]).filter(Boolean);
   } catch (error) {
     console.error('API Error:', error);
     throw error;
