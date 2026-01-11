@@ -3,25 +3,20 @@
 A recipe finder application built with vanilla JavaScript using TheMealDB API.
 
 ## Day 89: Search by Ingredient
-- Fetch recipes by ingredient from API
-- Recipe cards with image and title
+- Fetch recipes by ingredient
+- Recipe detail modal
 
 ## Day 90: Filter by Category
 - Category dropdown from API
-- Filter recipes by category
 
 ## Day 91: Save Favorites
-- Heart button on each recipe card
-- Save/remove favorites with localStorage
-- Favorites section with counter
-- Persistent across sessions
+- Heart button on cards
+- localStorage persistence
 
-## Features
-- Search by ingredient
-- Filter by category
-- Save favorites locally
-- Responsive grid layout
-- Theme toggle
+## Day 92: Combine API and Storage
+- Tab navigation (Search/Favorites)
+- Unified tabbed view
+- Synced favorites across tabs
 
 ## Project Structure
 ```
