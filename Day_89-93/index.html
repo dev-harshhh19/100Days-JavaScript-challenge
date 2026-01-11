@@ -13,48 +13,52 @@
     <div class="header">
       <button class="theme-toggle" id="themeToggle" title="Toggle Theme">🌙</button>
       <h1>Recipe Finder</h1>
-      <p>Search recipes by ingredient</p>
+      <p>Discover delicious recipes</p>
     </div>
 
     <div class="search-container">
       <div class="search-box">
-        <input type="text" id="searchInput" placeholder="Enter an ingredient (e.g., chicken)">
+        <input type="text" id="searchInput" placeholder="Search recipes by name or ingredient...">
         <button class="btn-search" id="searchBtn">Search</button>
       </div>
-      <p class="search-hint">Try: chicken, beef, salmon, tomato, rice...</p>
     </div>
 
-    <div class="filter-container">
-      <label for="categoryFilter">Filter by Category:</label>
-      <select id="categoryFilter">
-        <option value="">All Categories</option>
-      </select>
-      <button class="btn-favorites" id="showFavoritesBtn">❤️ Favorites (<span id="favoritesCount">0</span>)</button>
+    <!-- Tab Navigation -->
+    <div class="tabs-container">
+      <button class="tab-btn active" data-tab="search" id="searchTab">
+        🔍 Search Results
+      </button>
+      <button class="tab-btn" data-tab="favorites" id="favoritesTab">
+        ❤️ Favorites (<span id="favoritesCount">0</span>)
+      </button>
     </div>
 
-    <div class="favorites-section" id="favoritesSection" style="display: none;">
-      <div class="favorites-header">
-        <h2>My Favorites</h2>
-        <button class="btn-close" id="closeFavoritesBtn">✕</button>
-      </div>
-      <div id="favoritesGrid" class="recipes-grid"></div>
-    </div>
-
-    <div class="results-container">
+    <!-- Search Results Tab -->
+    <div class="tab-content active" id="searchContent">
       <div id="loadingState" class="loading-state" style="display: none;">
         <div class="spinner"></div>
         <p>Searching recipes...</p>
       </div>
 
       <div id="errorState" class="error-state" style="display: none;">
-        <p id="errorMessage">Something went wrong. Please try again.</p>
+        <p id="errorMessage">Something went wrong.</p>
       </div>
 
       <div id="emptyState" class="empty-state">
-        <p>Search for an ingredient to find delicious recipes!</p>
+        <p>Search for recipes or browse random picks!</p>
+        <button class="btn-browse" id="browseRandomBtn">Get Random Recipes</button>
       </div>
 
       <div id="recipesGrid" class="recipes-grid"></div>
+    </div>
+
+    <!-- Favorites Tab -->
+    <div class="tab-content" id="favoritesContent">
+      <div id="favoritesGrid" class="recipes-grid"></div>
+      <div id="favoritesEmpty" class="favorites-empty" style="display: none;">
+        <p>No favorites yet!</p>
+        <p>Click the ❤️ on any recipe to save it here.</p>
+      </div>
     </div>
   </div>
 
@@ -62,9 +66,7 @@
   <div class="modal-overlay" id="recipeModal" style="display: none;">
     <div class="modal-content">
       <button class="modal-close" id="closeModalBtn">✕</button>
-      <div class="modal-body" id="modalBody">
-        <!-- Recipe details load here -->
-      </div>
+      <div class="modal-body" id="modalBody"></div>
     </div>
   </div>
 
