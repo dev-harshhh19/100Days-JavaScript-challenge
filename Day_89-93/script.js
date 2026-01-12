@@ -1,5 +1,3 @@
-// Main Script - Day 92: Combine API and Storage with Tabs
-
 import { searchByName, getRandomMeals, getMealDetails } from './Js/api.js';
 import { initTheme, toggleTheme, getTheme } from './Js/theme.js';
 import { getFavorites, toggleFavorite, isFavorite } from './Js/favorites.js';
