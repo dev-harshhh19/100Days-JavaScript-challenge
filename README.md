@@ -1,6 +1,6 @@
 # 100 Days JavaScript Challenge
 
-![Progress](https://img.shields.io/badge/Progress-93%2F100_Days-brightgreen?style=for-the-badge)
+![Progress](https://img.shields.io/badge/Progress-94%2F100_Days-brightgreen?style=for-the-badge)
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![Status](https://img.shields.io/badge/Status-In_Progress-blue?style=for-the-badge)
 
