@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 98 - JavaScript Logic Systems</title>
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --card: #141414;
+      --primary: #d84100;
+      --text: #ffffff;
+      --muted: #888;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 40px 20px;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: var(--primary);
+    }
+
+    h2 {
+      margin-bottom: 15px;
+      font-size: 1.3em;
+    }
+
+    .section {
+      background: var(--card);
+      padding: 25px;
+      border-radius: 12px;
+      margin-bottom: 25px;
+      border: 1px solid #222;
+    }
+
+    .controls {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 15px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.95em;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .output {
+      background: #0d0d0d;
+      padding: 15px;
+      border-radius: 8px;
+      font-family: monospace;
+      font-size: 0.9em;
+      min-height: 100px;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+
+    .state-badge {
+      display: inline-block;
+      padding: 5px 15px;
+      background: var(--primary);
+      border-radius: 20px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .log-entry {
+      margin: 5px 0;
+      padding: 5px;
+      border-left: 2px solid var(--primary);
+      padding-left: 10px;
+    }
+
+    .log-entry.warning {
+      border-color: #f59e0b;
+    }
+
+    .log-entry.action {
+      border-color: #10b981;
+    }
+
+    input {
+      padding: 10px;
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 6px;
+      color: white;
+      width: 80px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Day 98: JavaScript Logic Systems</h1>
+
+    <!-- State Machine Demo -->
+    <div class="section">
+      <h2>98.1 Finite State Machine</h2>
+      <p style="color: var(--muted); margin-bottom: 15px;">Manage application states: idle → running → paused → finished
+      </p>
+      <div class="state-badge" id="currentState">IDLE</div>
+      <div class="controls">
+        <button id="startBtn">Start</button>
+        <button id="pauseBtn" disabled>Pause</button>
+        <button id="resumeBtn" disabled>Resume</button>
+        <button id="finishBtn" disabled>Finish</button>
+        <button id="resetBtn" disabled>Reset</button>
+      </div>
+      <div class="output" id="fsmOutput"></div>
+    </div>
+
+    <!-- Rule Engine Demo -->
+    <div class="section">
+      <h2>98.2 Rule-Based Decision Engine</h2>
+      <p style="color: var(--muted); margin-bottom: 15px;">Evaluate rules based on user age and balance</p>
+      <div class="controls">
+        <label>Age: <input type="number" id="ageInput" value="25"></label>
+        <label>Balance: <input type="number" id="balanceInput" value="500"></label>
+        <button id="evaluateBtn">Evaluate Rules</button>
+      </div>
+      <div class="output" id="ruleOutput"></div>
+    </div>
+
+    <!-- Event Queue Demo -->
+    <div class="section">
+      <h2>98.3 Event Queue System</h2>
+      <p style="color: var(--muted); margin-bottom: 15px;">Ordered event processing with priorities</p>
+      <div class="controls">
+        <button id="addLowBtn">Add Low Priority</button>
+        <button id="addHighBtn">Add High Priority</button>
+        <button id="pauseQueueBtn">Pause Queue</button>
+        <button id="resumeQueueBtn">Resume Queue</button>
+        <button id="clearQueueBtn">Clear Queue</button>
+      </div>
+      <div class="output" id="queueOutput"></div>
+    </div>
+  </div>
+
+  <script src="./Js/stateMachine.js"></script>
+  <script src="./Js/ruleEngine.js"></script>
+  <script src="./Js/eventQueue.js"></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>
