@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 99 - Alarm System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Alarm System</h1>
+
+    <div class="clock" id="clock">00:00:00</div>
+
+    <div class="add-alarm">
+      <h3>Add New Alarm</h3>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Time</label>
+          <input type="time" id="alarmTime" value="08:00">
+        </div>
+        <div class="form-group">
+          <label>Label</label>
+          <input type="text" id="alarmLabel" placeholder="Wake up" maxlength="30">
+        </div>
+        <div class="form-group">
+          <label>Snooze (min)</label>
+          <select id="snoozeDuration">
+            <option value="1">1</option>
+            <option value="5" selected>5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+          </select>
+        </div>
+        <button id="addAlarmBtn">Add Alarm</button>
+      </div>
+    </div>
+
+    <div class="alarms-list">
+      <h3>Your Alarms</h3>
+      <div id="alarmsContainer">
+        <div class="empty-state">No alarms set</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Alert Modal -->
+  <div class="alert-overlay" id="alertOverlay">
+    <div class="alert-modal">
+      <div class="alert-time" id="alertTime">00:00</div>
+      <div class="alert-label" id="alertLabel">Alarm</div>
+      <div class="alert-buttons">
+        <button class="secondary" id="snoozeBtn">Snooze</button>
+        <button id="dismissBtn">Dismiss</button>
+      </div>
+      <div class="snooze-info" id="snoozeInfo"></div>
+    </div>
+  </div>
+
+  <script src="./Js/alarm.js"></script>
+  <script src="./Js/scheduler.js"></script>
+  <script src="./Js/storage.js"></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>
