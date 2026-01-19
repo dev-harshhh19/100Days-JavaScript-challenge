@@ -1,8 +1,8 @@
 # 100 Days JavaScript Challenge
 
-![Progress](https://img.shields.io/badge/Progress-99%2F100_Days-brightgreen?style=for-the-badge)
+![Progress](https://img.shields.io/badge/Progress-100%2F100_Days-brightgreen?style=for-the-badge)
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Status](https://img.shields.io/badge/Status-In_Progress-blue?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
 
 > A comprehensive JavaScript learning journey covering fundamental to advanced concepts over 100 days. This repository documents daily progress with practical examples and exercises.
 
@@ -93,13 +93,10 @@
 | 81-84 | Expense Tracker (Project) | A complete expense tracking application built with vanilla JavaScript using **ES6 Modules**. | [View](Day_81-84/README.md) |
 | 85-88 | Quiz Game (Project) | Logic-heavy quiz with timer, score tracking, high score, and state management | [View](Day_85-88/README.md) |
 | 89-93 | Recipe Finder (Project) | Recipe search app using TheMealDB API with modular JS structure | [View](Day_89-93/README.md) |
-| 94 | Coming Soon | - | - |
-| 95 | Coming Soon | - | - |
-| 96 | Coming Soon | - | - |
-| 97 | Coming Soon | - | - |
-| 98 | Coming Soon | - | - |
-| 99 | Coming Soon | - | - |
-| 100 | Coming Soon | - | - |
+| 94-97 | Portfolio Project | A complete portfolio website built with vanilla JavaScript using **ES6 Modules**. | [View](Day_94-97/README.md) |
+| 98 | JavaScript Logic Systems | FSM, Rule Engine, Event Queue | [Day 98](./Day_98) |
+| 99 | Alarm / Reminder System | Scheduler, Snooze, localStorage | [Day 99](./Day_99) |
+| 100 | Journey Documentation | Visual Timeline, Roadmap, Celebration | [Day 100](./Day_100) |
 
 ---
 
