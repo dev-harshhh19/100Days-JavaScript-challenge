@@ -246,8 +246,9 @@ This 100-day journey transformed me from someone who "knew JavaScript" to someon
 Every bug was a teacher. Every project was practice. Every day was progress.
 
 **The journey continues...**
-
 THE NEXT JOURNEY WILL BE WITH REACT.JS OF 60 DAYS [Click Here](https://github.com/dev-harshhh19/60DaysFullStack.git)
+
+---
 `Note: Currently is repo is in progress or private`
 ---
 
