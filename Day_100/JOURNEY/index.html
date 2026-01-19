@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>100 Days of JavaScript - Journey</title>
+  <link rel="stylesheet" href="journey.css">
+</head>
+
+<body>
+  <!-- Particles Background -->
+  <div class="particles" id="particles"></div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="badge">COMPLETED</div>
+      <h1 class="title">
+        <span class="number">100</span>
+        <span class="text">Days of JavaScript</span>
+      </h1>
+      <p class="subtitle">A Visual Journey Through Code</p>
+      <div class="stats-row">
+        <div class="stat">
+          <span class="stat-number" data-target="100">0</span>
+          <span class="stat-label">Days</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-target="15">0</span>
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-target="5000">0</span>
+          <span class="stat-label">Lines of Code</span>
+        </div>
+      </div>
+      <div class="hero-buttons">
+        <a href="https://github.com/dev-harshhh19/100Days-JavaScript-challenge" target="_blank" class="btn btn-primary">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+          </svg>
+          View on GitHub
+        </a>
+        <a href="roadmap.html" class="btn btn-outline">
+          View Detailed Roadmap
+        </a>
+      </div>
+      <div class="scroll-indicator">
+        <span>Scroll to explore</span>
+        <div class="arrow"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline Section -->
+  <section class="timeline-section">
+    <h2 class="section-title">The Journey</h2>
+
+    <div class="timeline">
+      <!-- Phase 1 -->
+      <div class="timeline-phase phase-1">
+        <div class="phase-header">
+          <span class="phase-number">01</span>
+          <h3>Fundamentals</h3>
+          <span class="phase-days">Days 1-25</span>
+        </div>
+        <div class="phase-content">
+          <div class="milestone" data-day="1">
+            <div class="milestone-dot"></div>
+            <div class="milestone-content">
+              <h4>First Line of Code</h4>
+              <p>console.log("Hello, World!");</p>
+            </div>
+          </div>
+          <div class="milestone" data-day="10">
+            <div class="milestone-dot"></div>
+            <div class="milestone-content">
+              <h4>DOM Manipulation</h4>
+              <p>Making pages interactive</p>
+            </div>
+          </div>
+          <div class="milestone" data-day="25">
+            <div class="milestone-dot"></div>
+            <div class="milestone-content">
+              <h4>First Calculator</h4>
+              <p>Building something real</p>
+            </div>
+          </div>
+          <div class="skills-learned">
+            <span>Variables</span>
+            <span>Functions</span>
+            <span>Arrays</span>
+            <span>Objects</span>
+            <span>DOM</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phase 2 -->
+      <div class="timeline-phase phase-2">
+        <div class="phase-header">
+          <span class="phase-number">02</span>
+          <h3>Intermediate</h3>
+          <span class="phase-days">Days 26-50</span>
+        </div>
+        <div class="phase-content">
+          <div class="milestone" data-day="30">
+            <div class="milestone-dot"></div>
+            <div class="milestone-content">
+              <h4>Async/Await Mastery</h4>
+              <p>Understanding the event loop</p>
+            </div>
+          </div>
+          <div class="milestone" data-day="40">
+            <div class="milestone-dot"></div>
+            <div class="milestone-content">
+              <h4>First API Call</h4>
+              <p>Fetching real data</p>
+            </div>
+          </div>
+          <div class="milestone" data-day="50">
+            <div class="milestone-dot"></div>
+            <div class="milestone-content">
+              <h4>Weather App</h4>
+              <p>Complete API project</p>
+            </div>
+          </div>
+          <div class="skills-learned">
+            <span>Promises</span>
+            <span>Fetch API</span>
+            <span>ES6+</span>
+            <span>Modules</span>
+            <span>LocalStorage</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phase 3 -->
+      <div class="timeline-phase phase-3">
+        <div class="phase-header">
+          <span class="phase-number">03</span>
+          <h3>Real Projects</h3>
+          <span class="phase-days">Days 51-80</span>
+        </div>
+        <div class="phase-content">
+          <div class="milestone" data-day="60">
+            <div class="milestone-dot"></div>
+            <div class="milestone-content">
+              <h4>Recipe Finder</h4>
+              <p>Search, favorites, modals</p>
+            </div>
+          </div>
+          <div class="milestone" data-day="70">
+            <div class="milestone-dot"></div>
+            <div class="milestone-content">
+              <h4>GitHub User Finder</h4>
+              <p>Profile exploration app</p>
+            </div>
+          </div>
+          <div class="milestone" data-day="80">
+            <div class="milestone-dot"></div>
+            <div class="milestone-content">
+              <h4>Expense Tracker</h4>
+              <p>Full CRUD application</p>
+            </div>
+          </div>
+          <div class="skills-learned">
+            <span>Architecture</span>
+            <span>State</span>
+            <span>CRUD</span>
+            <span>UI/UX</span>
+            <span>Responsive</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phase 4 -->
+      <div class="timeline-phase phase-4">
+        <div class="phase-header">
+          <span class="phase-number">04</span>
+          <h3>Advanced Systems</h3>
+          <span class="phase-days">Days 81-100</span>
+        </div>
+        <div class="phase-content">
+          <div class="milestone" data-day="90">
+            <div class="milestone-dot"></div>
+            <div class="milestone-content">
+              <h4>Portfolio Website</h4>
+              <p>3D effects & animations</p>
+            </div>
+          </div>
+          <div class="milestone" data-day="98">
+            <div class="milestone-dot"></div>
+            <div class="milestone-content">
+              <h4>Logic Systems</h4>
+              <p>FSM, Rule Engine, Events</p>
+            </div>
+          </div>
+          <div class="milestone milestone-final" data-day="100">
+            <div class="milestone-dot"></div>
+            <div class="milestone-content">
+              <h4> Day 100!</h4>
+              <p>Journey Complete</p>
+            </div>
+          </div>
+          <div class="skills-learned">
+            <span>Design Patterns</span>
+            <span>Event Systems</span>
+            <span>Schedulers</span>
+            <span>Optimization</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Showcase -->
+  <section class="projects-section">
+    <h2 class="section-title">Projects Built</h2>
+    <div class="projects-grid">
+      <div class="project-card" data-project="weather">
+        <div class="project-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path
+              d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+            <circle cx="12" cy="12" r="4" />
+          </svg>
+        </div>
+        <h4>Weather App</h4>
+        <p>Real-time weather data</p>
+      </div>
+      <div class="project-card" data-project="recipe">
+        <div class="project-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2M7 2v20M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7" />
+          </svg>
+        </div>
+        <h4>Recipe Finder</h4>
+        <p>Search & save recipes</p>
+      </div>
+      <div class="project-card" data-project="github">
+        <div class="project-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+          </svg>
+        </div>
+        <h4>GitHub Finder</h4>
+        <p>Explore profiles</p>
+      </div>
+      <div class="project-card" data-project="expense">
+        <div class="project-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="12" y1="1" x2="12" y2="23" />
+            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+          </svg>
+        </div>
+        <h4>Expense Tracker</h4>
+        <p>Manage finances</p>
+      </div>
+      <div class="project-card" data-project="quiz">
+        <div class="project-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+            <line x1="12" y1="17" x2="12.01" y2="17" />
+          </svg>
+        </div>
+        <h4>Quiz Game</h4>
+        <p>Interactive trivia</p>
+      </div>
+      <div class="project-card" data-project="portfolio">
+        <div class="project-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+            <circle cx="8.5" cy="8.5" r="1.5" />
+            <polyline points="21 15 16 10 5 21" />
+          </svg>
+        </div>
+        <h4>Portfolio</h4>
+        <p>Personal website</p>
+      </div>
+      <div class="project-card" data-project="alarm">
+        <div class="project-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="13" r="8" />
+            <path d="M12 9v4l2 2" />
+            <path d="M5 3L2 6M22 6l-3-3" />
+          </svg>
+        </div>
+        <h4>Alarm System</h4>
+        <p>Snooze & reminders</p>
+      </div>
+      <div class="project-card" data-project="logic">
+        <div class="project-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path
+              d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 1 1 7.072 0l-.548.547A3.374 3.374 0 0 0 14 18.469V19a2 2 0 1 1-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+          </svg>
+        </div>
+        <h4>Logic Systems</h4>
+        <p>FSM & Event Queue</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Celebration Section -->
+  <section class="celebration">
+    <div class="confetti" id="confetti"></div>
+    <div class="celebration-content">
+      <h2>Journey Complete!</h2>
+      <p class="celebration-text">From <code>console.log</code> to building complete systems</p>
+      <div class="final-message">
+        <p>"Every expert was once a beginner."</p>
+      </div>
+      <div class="signature">
+        <span>Harshad</span>
+        <span class="date">January 2026</span>
+      </div>
+    </div>
+  </section>
+
+  <script src="journey.js"></script>
+</body>
+
+</html>

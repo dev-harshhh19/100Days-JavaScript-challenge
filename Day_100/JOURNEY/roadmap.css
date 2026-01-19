@@ -1,0 +1,291 @@
+/* Roadmap Page Styles */
+
+:root {
+  --bg: #0a0a0a;
+  --card: #141414;
+  --primary: #d84100;
+  --primary-light: #e27140;
+  --secondary: #fbbf24;
+  --text: #ffffff;
+  --muted: #888;
+  --success: #10b981;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  animation: pageIn 0.6s ease-out;
+}
+
+/* Page Transitions */
+@keyframes pageIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-transitioning {
+  animation: pageOut 0.4s ease-in forwards;
+}
+
+@keyframes pageOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+}
+
+/* Navigation */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+  border-bottom: 1px solid #222;
+}
+
+.back-link {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.back-link:hover {
+  color: var(--primary);
+}
+
+.github-link {
+  color: var(--muted);
+  transition: color 0.3s;
+}
+
+.github-link:hover {
+  color: var(--text);
+}
+
+/* Header */
+.header {
+  text-align: center;
+  padding: 120px 20px 60px;
+  background: radial-gradient(ellipse at center, rgba(216, 65, 0, 0.1) 0%, transparent 70%);
+}
+
+.header h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.header p {
+  color: var(--muted);
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.progress-bar {
+  max-width: 400px;
+  height: 8px;
+  background: #222;
+  border-radius: 4px;
+  margin: 0 auto 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  border-radius: 4px;
+  animation: fillProgress 2s ease-out;
+}
+
+@keyframes fillProgress {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+.progress-text {
+  color: var(--success);
+  font-weight: 600;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Phase Sections */
+.phase {
+  margin-bottom: 80px;
+}
+
+.phase-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  background: var(--primary);
+  color: white;
+  border-radius: 20px;
+  font-size: 0.85em;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.phase h2 {
+  font-size: 2em;
+  margin-bottom: 5px;
+}
+
+.phase-subtitle {
+  color: var(--muted);
+  margin-bottom: 30px;
+}
+
+/* Days Grid */
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.day-card {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #222;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.day-card::before {
+  content: '✓';
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 24px;
+  height: 24px;
+  background: var(--success);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8em;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.3s ease;
+}
+
+.day-card.completed::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.day-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.day-card.highlight {
+  border-color: var(--secondary);
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.1) 0%, var(--card) 100%);
+}
+
+.day-card.final {
+  border-color: var(--primary);
+  background: linear-gradient(135deg, rgba(216, 65, 0, 0.2) 0%, var(--card) 100%);
+}
+
+.day-num {
+  display: inline-block;
+  font-size: 0.85em;
+  font-weight: 700;
+  color: var(--primary);
+  background: rgba(216, 65, 0, 0.1);
+  padding: 4px 10px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.day-card h4 {
+  font-size: 1.1em;
+  margin-bottom: 8px;
+}
+
+.day-card p {
+  color: var(--muted);
+  font-size: 0.9em;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 40px 20px;
+  border-top: 1px solid #222;
+  color: var(--muted);
+}
+
+.footer a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer p:last-child {
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2em;
+  }
+
+  .phase h2 {
+    font-size: 1.5em;
+  }
+
+  .days-grid {
+    grid-template-columns: 1fr;
+  }
+}

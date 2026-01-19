@@ -1,0 +1,643 @@
+/* 100 Days Journey - Visual Animated Styles */
+
+:root {
+  --bg: #0a0a0a;
+  --bg-light: #111;
+  --primary: #d84100;
+  --primary-light: #e27140;
+  --secondary: #fbbf24;
+  --text: #ffffff;
+  --muted: #888;
+  --card: #1a1a1a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  animation: pageIn 0.6s ease-out;
+}
+
+/* Page Transition */
+@keyframes pageIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-transitioning {
+  animation: pageOut 0.4s ease-in forwards;
+}
+
+@keyframes pageOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+}
+
+/* Particles Background */
+.particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--primary);
+  border-radius: 50%;
+  opacity: 0.3;
+  animation: float 15s infinite ease-in-out;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+
+  25% {
+    transform: translateY(-30px) translateX(10px);
+  }
+
+  50% {
+    transform: translateY(-10px) translateX(-10px);
+  }
+
+  75% {
+    transform: translateY(-40px) translateX(5px);
+  }
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  background: radial-gradient(ellipse at center, rgba(216, 65, 0, 0.1) 0%, transparent 70%);
+}
+
+.hero-content {
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.badge {
+  display: inline-block;
+  padding: 8px 20px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.9em;
+  margin-bottom: 30px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(216, 65, 0, 0.4);
+  }
+
+  50% {
+    box-shadow: 0 0 0 15px rgba(216, 65, 0, 0);
+  }
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+.title .number {
+  display: block;
+  font-size: 8em;
+  font-weight: 800;
+  line-height: 1;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: countIn 1s ease-out;
+}
+
+@keyframes countIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.title .text {
+  display: block;
+  font-size: 2em;
+  font-weight: 300;
+  color: var(--muted);
+  letter-spacing: 3px;
+}
+
+.subtitle {
+  font-size: 1.3em;
+  color: var(--muted);
+  margin-bottom: 50px;
+}
+
+.stats-row {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-bottom: 60px;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 3em;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.stat-label {
+  color: var(--muted);
+  font-size: 0.9em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.scroll-indicator {
+  animation: bounce 2s infinite;
+}
+
+.scroll-indicator span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+
+.arrow {
+  width: 20px;
+  height: 20px;
+  border-right: 2px solid var(--primary);
+  border-bottom: 2px solid var(--primary);
+  transform: rotate(45deg);
+  margin: 0 auto;
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+/* Hero Buttons */
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  border: 2px solid var(--primary);
+}
+
+.btn-primary:hover {
+  background: var(--primary-light);
+  border-color: var(--primary-light);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(216, 65, 0, 0.3);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.btn-outline:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* Section Title */
+.section-title {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 60px;
+  color: var(--text);
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--primary);
+  margin: 20px auto 0;
+  border-radius: 2px;
+}
+
+/* Timeline Section */
+.timeline-section {
+  padding: 100px 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.timeline {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, var(--primary), var(--secondary));
+  border-radius: 3px;
+}
+
+.timeline-phase {
+  margin-bottom: 80px;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all 0.6s ease-out;
+}
+
+.timeline-phase.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.phase-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  padding-left: 80px;
+}
+
+.phase-number {
+  font-size: 3em;
+  font-weight: 800;
+  color: var(--primary);
+  opacity: 0.3;
+}
+
+.phase-header h3 {
+  font-size: 1.8em;
+  flex: 1;
+}
+
+.phase-days {
+  background: var(--card);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  color: var(--muted);
+}
+
+.phase-content {
+  padding-left: 100px;
+}
+
+.milestone {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.milestone-dot {
+  width: 16px;
+  height: 16px;
+  background: var(--primary);
+  border-radius: 50%;
+  margin-top: 5px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.milestone-dot::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  background: var(--primary);
+  opacity: 0.2;
+  border-radius: 50%;
+  animation: ripple 2s infinite;
+}
+
+@keyframes ripple {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0.3;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0;
+  }
+}
+
+.milestone-content h4 {
+  font-size: 1.1em;
+  margin-bottom: 5px;
+}
+
+.milestone-content p {
+  color: var(--muted);
+  font-size: 0.95em;
+}
+
+.milestone-final .milestone-dot {
+  background: var(--secondary);
+  width: 24px;
+  height: 24px;
+}
+
+.skills-learned {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.skills-learned span {
+  padding: 6px 14px;
+  background: rgba(216, 65, 0, 0.1);
+  border: 1px solid var(--primary);
+  border-radius: 20px;
+  font-size: 0.85em;
+  color: var(--primary);
+}
+
+/* Projects Section */
+.projects-section {
+  padding: 100px 20px;
+  background: var(--bg-light);
+  position: relative;
+  z-index: 1;
+}
+
+.projects-grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+}
+
+.project-card {
+  background: var(--card);
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  border: 1px solid #222;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  border-color: var(--primary);
+  box-shadow: 0 20px 40px rgba(216, 65, 0, 0.2);
+}
+
+.project-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 15px;
+  color: var(--primary);
+  transition: all 0.3s ease;
+}
+
+.project-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.project-card:hover .project-icon {
+  color: var(--secondary);
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 10px rgba(216, 65, 0, 0.5));
+}
+
+.project-card h4 {
+  font-size: 1.1em;
+  margin-bottom: 8px;
+}
+
+.project-card p {
+  color: var(--muted);
+  font-size: 0.9em;
+}
+
+/* Celebration Section */
+.celebration {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  background: radial-gradient(ellipse at center, rgba(251, 191, 36, 0.1) 0%, transparent 70%);
+}
+
+.confetti {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.confetti-piece {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: -20px;
+  animation: confettiFall 5s linear infinite;
+}
+
+@keyframes confettiFall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+.celebration-content h2 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.celebration-text {
+  font-size: 1.3em;
+  color: var(--muted);
+  margin-bottom: 40px;
+}
+
+.celebration-text code {
+  background: var(--card);
+  padding: 4px 10px;
+  border-radius: 5px;
+  color: var(--primary);
+}
+
+.final-message {
+  font-size: 1.5em;
+  font-style: italic;
+  color: var(--secondary);
+  margin-bottom: 40px;
+}
+
+.signature {
+  color: var(--muted);
+}
+
+.signature span {
+  display: block;
+}
+
+.signature span:first-child {
+  font-size: 1.5em;
+  color: var(--text);
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .title .number {
+    font-size: 5em;
+  }
+
+  .title .text {
+    font-size: 1.3em;
+  }
+
+  .stats-row {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .stat-number {
+    font-size: 2.5em;
+  }
+
+  .timeline::before {
+    left: 20px;
+  }
+
+  .phase-header {
+    padding-left: 50px;
+    flex-wrap: wrap;
+  }
+
+  .phase-number {
+    font-size: 2em;
+  }
+
+  .phase-content {
+    padding-left: 50px;
+  }
+
+  .celebration-content h2 {
+    font-size: 2em;
+  }
+}
